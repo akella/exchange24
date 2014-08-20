@@ -1,9 +1,25 @@
-// default layout
-.l
-	+clr
-	.l-col1
-		float: left
-		width: 20%
-	.l-col2
-		float: right
-		width: 70%
+
+$sidenav: 225px
+$collapsed: 80px
+.l-sidenav
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0 
+	z-index: 100 
+	background: #445572 
+	width: $collapsed 
+	overflow: hidden
+	+transition(all .3s ease)
+	.is-sidenav &
+		width: $sidenav 
+.l-content
+	margin-left: $collapsed
+	+transition(all .3s ease)
+	.is-sidenav &
+		margin-left: $sidenav 
+.l-center
+	width: 852px 
+	margin: 0 auto 
+		
+		

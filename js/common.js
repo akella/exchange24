@@ -1,8 +1,11 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$('.js-menu').on("click", function(){
+		$('body').toggleClass('is-sidenav is-notsidenav');
+	});
 
-	console.log($('body').html());
+	$('.js-toggle').click(function(event) {
+		$('#'+$(this).data('toggle')).slideToggle();
+	});
+
 });

@@ -18,9 +18,109 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: proxima; src: url("fonts/proximanova-regular-webfont.eot"); src: url("fonts/proximanova-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-regular-webfont.woff") format("woff"), url("fonts/proximanova-regular-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
-.l { *zoom: 1; }
-.l:after { content: " "; display: table; clear: both; }
-.l .l-col1 { float: left; width: 20%; }
-.l .l-col2 { float: right; width: 70%; }
+@font-face { font-family: lite; src: url("fonts/proximanova-light-webfont.eot"); src: url("fonts/proximanova-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-light-webfont.woff") format("woff"), url("fonts/proximanova-light-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: bold; src: url("fonts/proximanova-bold-webfont.eot"); src: url("fonts/proximanova-bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-bold-webfont.woff") format("woff"), url("fonts/proximanova-bold-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: semi; src: url("fonts/proximanova-semibold-webfont.eot"); src: url("fonts/proximanova-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/proximanova-semibold-webfont.woff") format("woff"), url("fonts/proximanova-semibold-webfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; line-height: 1.4; background: #e6eef2; }
+
+.b { background: white; margin-bottom: 30px; border-radius: 2px; }
+
+.header { border-bottom: 2px solid #485878; height: 58px; line-height: 58px; padding-left: 25px; *zoom: 1; }
+.header:after { content: " "; display: table; clear: both; }
+.header h2 { float: left; font-family: semi, sans-serif; font-weight: normal; font-size: 21px; }
+.header .header__add { float: right; background: #44afa1; height: 40px; line-height: 40px; border-radius: 3px; font-size: 17px; color: white; padding: 0 13px; margin: 9px 9px 0 0; cursor: pointer; }
+.header .header__add i { display: inline-block; vertical-align: middle; position: relative; top: 2px; font-size: 14px; margin-right: 8px; }
+
+.table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+.table th, .table td { font-weight: normal; border-bottom: 1px solid #ebeff6; padding: 17px 14px; text-align: left; font-size: 18px; color: #455473; }
+.table tr:last-child td, .table tr:last-child th { border-bottom: none; }
+.table .table__edit { background: #70859d; width: 38px; padding: 0; text-align: center; color: white; cursor: pointer; }
+.table .table__edit i { position: relative; top: 3px; }
+.table .table__green { color: #44afa1; font-family: semi, sans-serif; font-weight: normal; }
+
+@font-face { font-family: iconset; src: url("fonts/untitled-font-2.eot"); src: url("fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"), url("fonts/untitled-font-2.woff") format("woff"), url("fonts/untitled-font-2.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+[data-icon]:before { font-family: iconset !important; content: attr(data-icon); font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; color: red; }
+
+[class^="icon-"]:before, [class*=" icon-"]:before { font-family: iconset !important; font-style: normal !important; font-weight: normal !important; font-variant: normal !important; text-transform: none !important; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.icon-arrow:before { content: "a"; font-size: 8px; color: #515e77 !important; }
+
+.icon-delete:before { content: "b"; }
+
+.icon-i-bankinfo:before { content: "c"; }
+
+.icon-i-dashboard:before { content: "d"; }
+
+.icon-i-deposit:before { content: "e"; }
+
+.icon-i-transactions:before { content: "f"; }
+
+.icon-i-withdraw:before { content: "g"; }
+
+.icon-togglemenu:before { content: "h"; }
+
+.icon-edit:before { content: "i"; }
+
+.icon-add:before { content: "j"; }
+
+.l-sidenav { position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; background: #445572; width: 80px; overflow: hidden; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+.is-sidenav .l-sidenav { width: 225px; }
+
+.l-content { margin-left: 80px; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
+.is-sidenav .l-content { margin-left: 225px; }
+
+.l-center { width: 852px; margin: 0 auto; }
+
+.sidenav { position: relative; padding-top: 144px; }
+.sidenav .sidenav__toggle { position: absolute; top: 26px; left: 28px; font-size: 20px; color: #bec3ce; cursor: pointer; }
+.sidenav .sidenav__logo { position: absolute; top: 93px; left: 31px; font: 0/0 a; text-shadow: none; color: transparent; display: block; background: url("../img/icons/_logo.svg") no-repeat 0 0; -moz-background-size: 165px 26px 100%; -webkit-background-size: 165px 26px 100%; background-size: 165px 26px 100%; width: 165px; height: 26px; display: inline-block; opacity: 1; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; }
+.is-notsidenav .sidenav .sidenav__logo { opacity: 0; }
+
+.nav { list-style: none; }
+.nav a { display: block; color: #d5d8df; text-decoration: none; height: 65px; line-height: 65px; font-size: 16px; padding-left: 80px; padding-left: 30px; position: relative; white-space: nowrap; }
+.nav a i { font-size: 20px; vertical-align: middle; display: inline-block; width: 50px; position: relative; top: 3px; }
+.nav a span { opacity: 1; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear; display: inline-block; vertical-align: middle; }
+.is-notsidenav .nav a span { opacity: 0; }
+.nav a.is-active, .nav a:hover { color: #445572; background: #e6eef2; }
+.nav a.is-active { border-left: 6px solid #3db39e; padding-left: 24px; }
+
+.top { border-bottom: 2px solid #445572; height: 62px; line-height: 62px; }
+.top .top__current { float: left; padding-left: 50px; font-family: lite, sans-serif; font-weight: normal; font-size: 15px; text-transform: uppercase; }
+.top .top__current .top__buyprice { font-family: semi, sans-serif; font-weight: normal; font-size: 17px; color: #455473; display: inline-block; margin: 0 10px; }
+.top .top__current .top__select { font-family: semi, sans-serif; font-weight: normal; color: #49aea1; display: inline-block; vertical-align: middle; position: relative; font-size: 17px; line-height: 1; }
+.top .top__current .top__select select { opacity: 0; position: absolute; top: 0; left: 0; -webkit-appearance: none; z-index: 1; width: 100%; }
+.top .top__current .top__select i { margin-left: 5px; vertical-align: middle; position: relative; top: -2px; }
+.top .top__right { float: right; margin-right: 50px; white-space: nowrap; }
+.top .top__right .usernav { list-style: none; font-size: 0; display: inline-block; vertical-align: top; font-family: semi, sans-serif; font-weight: normal; }
+.top .top__right .usernav li { display: inline-block; vertical-align: top; }
+.top .top__right .usernav a { display: inline-block; vertical-align: top; height: 56px; line-height: 62px; font-size: 15px; padding-bottom: 6px; text-decoration: none; color: #455473; margin-right: 30px; }
+.top .top__right .usernav a.is-active, .top .top__right .usernav a:hover { border-bottom: 6px solid #49aea1; padding-bottom: 0; }
+.top .top__right .user { display: inline-block; margin-left: 17px; vertical-align: middle; font-size: 15px; color: #455473; cursor: pointer; }
+.top .top__right .user i { margin-left: 6px; }
+
+.exchange { height: 80px; line-height: 80px; overflow: hidden; width: 100%; font-family: semi, sans-serif; font-weight: normal; background: white; margin-bottom: 32px; }
+.exchange .exchange__from, .exchange .exchange__to { float: left; width: 50%; position: relative; text-align: center; font-size: 31px; color: #34495e; text-transform: uppercase; }
+.exchange .exchange__from:before { position: absolute; height: 100%; width: 1px; background: #ebeff6; z-index: 10; right: 0; top: 0; content: " "; }
+.exchange .exchange__currency { display: inline-block; vertical-align: top; font-size: 18px; color: #3db39e; text-transform: uppercase; position: relative; top: -0.3em; margin-left: 6px; }
+
+.addnew { background: #f9fafb; padding: 25px 0; }
+.addnew .addnew__in { border-radius: 3px; box-shadow: inset 0 0 0 2px #ebeff6; background: white; width: 424px; margin: 0 auto; padding-top: 22px; padding-left: 18px; padding-right: 18px; }
+.addnew .submit { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; margin-left: -18px; margin-right: -18px; }
+.addnew .field { margin-bottom: 20px; *zoom: 1; }
+.addnew .field:after { content: " "; display: table; clear: both; }
+.addnew .field label { width: 120px; float: left; font-size: 17px; color: #34495e; font-family: semi, sans-serif; font-weight: normal; padding-top: 10px; }
+.addnew .field input { border: 2px solid #bccdd5; border-radius: 3px; padding: 8px 16px; font-size: 17px; width: 266px; font-family: proxima, sans-serif; font-weight: normal; }
+.addnew .field input:-moz-placeholder, .addnew .field input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
+.addnew .field input::-webkit-input-placeholder { color: #cbcbcb; }
+.addnew .field .select { width: 266px; float: right; }
+
+.select { border: 2px solid #bccdd5; width: 266px; position: relative; display: inline-block; border-radius: 3px; padding: 8px 16px; }
+.select i { position: absolute; right: 15px; top: 12px; }
+.select .select__value { font-size: 17px; }
+.select select { opacity: 0; position: absolute; height: 100%; top: 0; left: 0; -webkit-appearance: none; z-index: 1; width: 100%; }

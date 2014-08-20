@@ -8,12 +8,131 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
-<body>
-<!-- BEGIN  out-->
-<div class="out">
-
+<body class="is-sidenav">
+<!-- begin l-sidenav  -->
+<div class="l-sidenav">
+	<!-- begin sidenav  -->
+	<div class="sidenav">
+		<div class="sidenav__toggle icon-togglemenu js-menu"></div>
+		<a href='#' class="sidenav__logo"></a>
+		<ul class="nav">
+			<li><a href="#"><i class="icon-i-dashboard"></i><span>Dashboard</span></a></li>
+			<li><a href="#"><i class="icon-i-deposit"></i><span>Deposit</span></a></li>
+			<li><a  class="is-active" href="#"><i class="icon-i-withdraw"></i><span>Withdraw</span></a></li>
+			<li><a href="#"><i class="icon-i-transactions"></i><span>Transactions</span></a></li>
+			<li><a href="#"><i class="icon-i-bankinfo"></i><span>Bank information</span></a></li>
+		</ul>
+	</div>
+	<!-- end sidenav -->
 </div>
-<!-- END out-->
+<!-- end l-sidenav -->
+<!-- begin l-content  -->
+<div class="l-content">
+	<!-- begin top  -->
+	<div class="top">
+		<!-- begin top__current  -->
+		<div class="top__current">
+			BUY PRICE <strong class="top__buyprice">$ 593.30</strong>
+			<div class="top__select">
+				<span class="top__selectvalue">USD</span><i class="icon-arrow"></i>
+				<select name="" id=""><option value="">BTC</option></select>
+			</div>
+		</div>
+		<!-- end top__current -->
+		<!-- begin top__right  -->
+		<div class="top__right">
+			<ul class="usernav">
+				<li><a href="#" class="is-active">account</a></li>
+				<li><a href="#">e24 wallet</a></li>
+				<li><a href="#">buy & sell</a></li>
+				<li><a href="#">e24 pay</a></li>
+			</ul>
+			<div class="user">
+				<div class="user__name">sean.j.yao@gmail.com<i class="icon-arrow"></i></div>
+			</div>
+		</div>
+		<!-- end top__right -->
+	</div>
+	<!-- end top -->
+	<!-- begin exchange  -->
+	<div class="exchange">
+		<div class="exchange__from">
+			<div class="exchange__value">236.27<div class="exchange__currency">BTC</div></div>
+		</div>
+		<div class="exchange__to">
+			<div class="exchange__value">12236.27<div class="exchange__currency">USD</div></div>
+		</div>
+	</div>
+	<!-- end exchange -->
+
+	<div class="l-center">
+		<!-- begin b  -->
+		<div class="b">
+			<div class="header">
+				<h2>Connected Bank Accounts</h2>
+				<div class="header__add js-toggle" data-toggle="addnew"><i class="icon-add"></i>Add New Bank Account</div>
+			</div>
+			<div id="addnew" class="addnew" hidden>
+				<div class="addnew__in">
+					<div class="field">
+						<label for="">Name</label>
+						<input type="text" placeholder="bank name">
+					</div>
+					<div class="field">
+						<label for="">IBAN</label>
+						<input type="text" placeholder="ex. DE123141231">
+					</div>
+					<div class="field">
+						<label for="">BIC (Swift)</label>
+						<input type="text" placeholder="ex. DEUTASD">
+					</div>
+					<div class="field">
+						<label for="">Country</label>
+						<div class="select">
+							<div class="select__value">United States</div>
+							<select name="" id=""><option value="u">Ukraine</option><option value="B">Russia</option></select>
+							<i class="icon-arrow"></i>
+						</div>
+					</div>
+					<div class="field">
+						<label for="">Currency</label>
+						<div class="select">
+							<div class="select__value">USD</div>
+							<select name="" id=""><option value="u">usd</option><option value="B">BTC</option></select>
+							<i class="icon-arrow"></i>
+						</div>
+					</div>
+					<div class="submit">Save</div>
+				</div>
+			</div>
+			<table class="table">
+				<tr>
+					<td class="table__edit"><i class="icon-edit"></i></td>
+					<td>Deutsche Bank</td>
+					<td class="table__green">EUR</td>
+					<td>DEUTDEBB101</td>
+					<td>DE89 3704 0044 0532 0130 00</td>
+				</tr>
+				<tr>
+					<td class="table__edit"><i class="icon-edit"></i></td>
+					<td>Deutsche Bank</td>
+					<td class="table__green">EUR</td>
+					<td>DEUTDEBB101</td>
+					<td>DE89 3704 0044 0532 0130 00</td>
+				</tr>
+				<tr>
+					<td class="table__edit"><i class="icon-edit"></i></td>
+					<td>Deutsche Bank</td>
+					<td class="table__green">EUR</td>
+					<td>DEUTDEBB101</td>
+					<td>DE89 3704 0044 0532 0130 00</td>
+				</tr>
+			</table>
+		</div>
+		<!-- end b -->
+	</div>
+</div>
+<!-- end l-content -->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

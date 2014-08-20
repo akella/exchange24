@@ -47,17 +47,90 @@
 // p
 // 	+jpg(bla)
 
++font(proxima,proximanova-regular-webfont)
++font(lite,proximanova-light-webfont)
++font(bold,proximanova-bold-webfont)
++font(semi,proximanova-semibold-webfont)
 
+=proxima
+	font-family: proxima,sans-serif
+	font-weight: normal 
+=lite
+	font-family: lite,sans-serif
+	font-weight: normal 
+=bold
+	font-family: bold,sans-serif
+	font-weight: normal 
+=semi
+	font-family: semi,sans-serif
+	font-weight: normal 
 body
-	font-family: Arial, sans-serif 
+	+proxima
 	font-size: 12px 
 	line-height: 1.4
+	background: #E6EEF2 
 
+.b
+	background: #fff 
+	margin-bottom: 30px 
+	border-radius: 2px
+.header
+	border-bottom: 2px solid #485878 
+	height: 58px 
+	line-height: 58px
+	padding-left: 25px  
+	+clr
+	h2
+		float: left
+		+semi
+		font-size: 21px 
+	.header__add
+		float: right
+		background: #44AFA1
+		height: 40px  
+		line-height: 40px
+		border-radius: 3px
+		font-size: 17px  
+		color: #fff
+		padding: 0 13px
+		margin: 9px 9px 0 0  
+		cursor: pointer
+		i
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: 2px  
+			font-size: 14px 
+			margin-right: 8px 
 
-// common blocks      
-
-
-
+.table
+	border-spacing: 0
+	border-collapse: collapse
+	width: 100%
+	th,td
+		font-weight: normal
+		border-bottom: 1px solid #EBEFF6 
+		padding: 17px 14px 
+		text-align: left
+		font-size: 18px 
+		color: #455473 
+	tr
+		&:last-child
+			td,th
+				border-bottom: none
+	.table__edit
+		background: #70859D
+		width: 38px  
+		padding: 0
+		text-align: center 
+		color: #fff 
+		cursor: pointer
+		i
+			position: relative
+			top: 3px 
+	.table__green
+		color: #44AFA1 
+		+semi
 
 
 
