@@ -45,8 +45,9 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__edit i, .table .table__info i, .table .table__remove i { position: relative; top: 3px; }
 .table .table__remove { background: #ecaaab; }
 .table .table__remove i { top: 3px; }
-.table .table__green { color: #44afa1; font-family: semi, sans-serif; font-weight: normal; }
+.table .table__green { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table .table__currency { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; margin-left: 10px; }
+.table .table__font { font-family: "Source Code Pro", sans-serif; font-weight: 400; }
 .table .table__amount { text-align: right; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table .table__status { font-style: italic; color: #49aea1; font-size: 18px; padding-left: 30px; padding-right: 30px; }
 .table .table__status.is-pending { color: #f1d36b; }
