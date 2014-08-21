@@ -9,7 +9,7 @@
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
-<body class="is-sidenav">
+<body class="is-notsidenav">
 <!-- begin l-sidenav  -->
 <div class="l-sidenav">
 	<!-- begin sidenav  -->
@@ -19,8 +19,8 @@
 		<ul class="nav">
 			<li><a href="#"><i class="icon-i-dashboard"></i><span>Dashboard</span></a></li>
 			<li><a href="#"><i class="icon-i-deposit"></i><span>Deposit</span></a></li>
-			<li><a  class="is-active" href="#"><i class="icon-i-withdraw"></i><span>Withdraw</span></a></li>
-			<li><a href="#"><i class="icon-i-transactions"></i><span>Transactions</span></a></li>
+			<li><a href="#"><i class="icon-i-withdraw"></i><span>Withdraw</span></a></li>
+			<li><a class="is-active" href="#"><i class="icon-i-transactions"></i><span>Transactions</span></a></li>
 			<li><a href="#"><i class="icon-i-bankinfo"></i><span>Bank information</span></a></li>
 		</ul>
 	</div>
@@ -67,11 +67,48 @@
 	<!-- end exchange -->
 
 	<div class="l-center">
+
+		<!-- begin b  -->
+		<div class="b">
+			<div id="addnew" class="addnew" hidden>
+				<div class="addnew__in">
+					<div class="field">
+						<label for="">Name</label>
+						<input type="text" placeholder="bank name">
+					</div>
+					<div class="field">
+						<label for="">IBAN</label>
+						<input type="text" placeholder="ex. DE123141231">
+					</div>
+					<div class="field">
+						<label for="">BIC (Swift)</label>
+						<input type="text" placeholder="ex. DEUTASD">
+					</div>
+					<div class="field">
+						<label for="">Country</label>
+						<div class="select">
+							<div class="select__value">United States</div>
+							<select name="" id=""><option value="u">Ukraine</option><option value="B">Russia</option></select>
+							<i class="icon-arrow"></i>
+						</div>
+					</div>
+					<div class="field">
+						<label for="">Currency</label>
+						<div class="select">
+							<div class="select__value">USD</div>
+							<select name="" id=""><option value="u">usd</option><option value="B">BTC</option></select>
+							<i class="icon-arrow"></i>
+						</div>
+					</div>
+					<div class="submit">Save</div>
+				</div>
+			</div>
+		</div>
+		<!-- end b -->
 		<!-- begin b  -->
 		<div class="b">
 			<div class="header">
-				<h2>Connected Bank Accounts</h2>
-				<div class="header__add js-toggle" data-toggle="addnew"><i class="icon-add"></i>Add New Bank Account</div>
+				<h2>Make a withdrawal</h2>
 			</div>
 			<div id="addnew" class="addnew" hidden>
 				<div class="addnew__in">
@@ -108,25 +145,25 @@
 			</div>
 			<table class="table">
 				<tr>
-					<td class="table__edit"><i class="icon-edit"></i></td>
-					<td>Deutsche Bank</td>
-					<td class="table__green">EUR</td>
-					<td>DEUTDEBB101</td>
-					<td>DE89 3704 0044 0532 0130 00</td>
+					<td class="table__date"><span>apr</span>28</td>
+					<td class="table__time">07:45</td>
+					<td>Bank of America</td>
+					<td class="table__amount">25.121313<span class="table__currency">BTC</span></td>
+					<td class="table__status is-pending">Pending</td>
 				</tr>
 				<tr>
-					<td class="table__edit"><i class="icon-edit"></i></td>
-					<td>Deutsche Bank</td>
-					<td class="table__green">EUR</td>
-					<td>DEUTDEBB101</td>
-					<td>DE89 3704 0044 0532 0130 00</td>
+					<td class="table__date"><span>apr</span>28</td>
+					<td class="table__time">07:45</td>
+					<td>Bank of America</td>
+					<td class="table__amount">25.121313<span class="table__currency">BTC</span></td>
+					<td class="table__status is-pending">Pending</td>
 				</tr>
 				<tr>
-					<td class="table__edit"><i class="icon-edit"></i></td>
-					<td>Deutsche Bank</td>
-					<td class="table__green">EUR</td>
-					<td>DEUTDEBB101</td>
-					<td>DE89 3704 0044 0532 0130 00</td>
+					<td class="table__date"><span>apr</span>28</td>
+					<td class="table__time">07:45</td>
+					<td>Bank of America</td>
+					<td class="table__amount">25.121313<span class="table__currency">BTC</span></td>
+					<td class="table__status is-pending">Pending</td>
 				</tr>
 			</table>
 		</div>

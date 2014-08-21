@@ -64,6 +64,20 @@
 =semi
 	font-family: semi,sans-serif
 	font-weight: normal 
+
+=slite
+	font-family: 'Source Code Pro',sans-serif
+	font-weight: 300
+=snormal
+	font-family: 'Source Code Pro',sans-serif
+	font-weight: 400
+=ssemi
+	font-family: 'Source Code Pro',sans-serif
+	font-weight: 600
+=sbold
+	font-family: 'Source Code Pro',sans-serif
+	font-weight: 700
+	
 body
 	+proxima
 	font-size: 12px 
@@ -152,11 +166,11 @@ body
 		+semi
 	.table__currency
 		color: #44AFA1 
-		+semi
+		+sbold
 		margin-left: 10px 
 	.table__amount
 		text-align: right
-		+bold
+		+sbold
 	.table__status
 		font-style: italic 
 		color: #49AEA1
@@ -176,10 +190,14 @@ body
 		text-transform: uppercase 
 		width: 44px 
 		vertical-align: middle
+		+slite
 		span
 			display: block
 			font-size: 17px
 			+bold
+	.table__time
+		padding-left: 0 
+		+snormal
 
 .filters
 	+clr
