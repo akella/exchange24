@@ -74,6 +74,21 @@ body
 	background: #fff 
 	margin-bottom: 30px 
 	border-radius: 2px
+.btn
+	background: #43B29E 
+	border-radius: 3px
+	min-width: 105px 
+	height: 33px 
+	line-height: 33px
+	white-space: nowrap
+	padding: 0 10px  
+	font-size: 14px 
+	+semi
+	cursor: pointer
+	color: #fff 
+	text-decoration: none
+	display: inline-block
+	text-align: center
 .header
 	border-bottom: 2px solid #485878 
 	height: 58px 
@@ -118,7 +133,7 @@ body
 		&:last-child
 			td,th
 				border-bottom: none
-	.table__edit
+	.table__edit,.table__info,.table__remove
 		background: #70859D
 		width: 38px  
 		padding: 0
@@ -128,12 +143,117 @@ body
 		i
 			position: relative
 			top: 3px 
+	.table__remove
+		background: #ECAAAB 
+		i
+			top: 3px 
 	.table__green
 		color: #44AFA1 
 		+semi
+	.table__currency
+		color: #44AFA1 
+		+semi
+		margin-left: 10px 
+	.table__amount
+		text-align: right
+		+bold
+	.table__status
+		font-style: italic 
+		color: #49AEA1
+		font-size: 18px 
+		padding-left: 30px 
+		padding-right: 30px 
+		&.is-pending
+			color: #F1D36B 
+	.table__date
+		padding-left: 27px 
+		padding-right: 20px 
+		padding-top: 0
+		padding-bottom: 0
+		font-size: 30px 
+		text-align: center
+		line-height: .8
+		text-transform: uppercase 
+		width: 44px 
+		vertical-align: middle
+		span
+			display: block
+			font-size: 17px
+			+bold
 
+.filters
+	+clr
+	padding: 15px 25px 
+	border-bottom: 1px solid #EBEFF6 
+	font-size: 0 
+	.filters__left
+		float: left
+	.filters__right
+		float: right
+		text-align: right
+		white-space: nowrap
+		.btn
+			margin-left: 10px 
 
+.select
+	border: 2px solid #BCCDD5
+	width: 266px 
+	position: relative
+	display: inline-block
+	border-radius: 3px
+	padding: 8px 16px 
 
+	
+	i
+		position: absolute
+		right: 15px
+		top: 12px  
+	.select__value
+		font-size: 17px 
+	select
+		opacity: 0
+		position: absolute
+		height: 100% 
+		top: 0
+		left: 0
+		-webkit-appearance: none
+		z-index: 1
+		width: 100% 
+	&.select_dark
+		border: none
+		width: auto 
+		padding: 0 23px 0 10px
+		height: 33px  
+		line-height: 33px
+		color: #fff 
+		background: #70859D 
+		margin-right: 10px 
+		vertical-align: top
+		i
+			top: 10px 
+			line-height: 1 
+			right: 8px 
+			&:before
+				color: #fff !important
+		.select__value
+			font-size: 14px 
+			+semi
+.input-date
+	display: inline-block
+	margin-right: 10px 
+	vertical-align: top
+	input
+		padding: 0 43px 0 7px 
+		height: 29px - 3px
+		padding-top: 3px 
+		border-radius: 3px 
+		+semi
+		font-size: 13px 
+		color: #677689
+		border: 2px solid #677689  
+		color: #495877 
+		
+		width: 80px 
 
 
 
