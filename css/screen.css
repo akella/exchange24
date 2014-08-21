@@ -50,7 +50,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__amount { text-align: right; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table .table__status { font-style: italic; color: #49aea1; font-size: 18px; padding-left: 30px; padding-right: 30px; }
 .table .table__status.is-pending { color: #f1d36b; }
-.table .table__date { padding-left: 27px; padding-right: 20px; padding-top: 0; padding-bottom: 0; font-size: 30px; text-align: center; line-height: 0.8; text-transform: uppercase; width: 44px; vertical-align: middle; font-family: "Source Code Pro", sans-serif; font-weight: 300; }
+.table .table__date { padding-left: 25px; padding-right: 20px; padding-top: 0; padding-bottom: 0; font-size: 30px; text-align: left; line-height: 0.8; text-transform: uppercase; width: 44px; vertical-align: middle; font-family: "Source Code Pro", sans-serif; font-weight: 300; }
 .table .table__date span { display: block; font-size: 17px; font-family: bold, sans-serif; font-weight: normal; }
 .table .table__time { padding-left: 0; font-family: "Source Code Pro", sans-serif; font-weight: 400; }
 
@@ -68,6 +68,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select.select_dark i { top: 10px; line-height: 1; right: 8px; }
 .select.select_dark i:before { color: white !important; }
 .select.select_dark .select__value { font-size: 14px; font-family: semi, sans-serif; font-weight: normal; }
+.select.select_green { border-color: #43b29e; width: auto; display: block; }
 
 .input-date { display: inline-block; margin-right: 10px; vertical-align: top; }
 .input-date input { padding: 0 43px 0 7px; height: 26px; padding-top: 3px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 13px; color: #677689; border: 2px solid #677689; color: #495877; width: 80px; }
@@ -140,9 +141,11 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .exchange .exchange__from:before { position: absolute; height: 100%; width: 1px; background: #ebeff6; z-index: 10; right: 0; top: 0; content: " "; }
 .exchange .exchange__currency { display: inline-block; vertical-align: top; font-size: 18px; color: #3db39e; text-transform: uppercase; position: relative; top: -0.3em; margin-left: 6px; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 
+.addnew .addnew__in, .amount .amount__in, .payout .payout__in { width: 424px; margin: 0 auto; }
+
 .addnew { background: #f9fafb; padding: 25px 0; }
-.addnew .addnew__in { border-radius: 3px; box-shadow: inset 0 0 0 2px #ebeff6; background: white; width: 424px; margin: 0 auto; padding-top: 22px; padding-left: 18px; padding-right: 18px; }
-.addnew .submit { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; margin-left: -18px; margin-right: -18px; }
+.addnew .addnew__in { border-radius: 3px; box-shadow: inset 0 0 0 2px #ebeff6; background: white; padding-top: 22px; padding-left: 18px; padding-right: 18px; }
+.addnew .submit { margin-left: -18px; margin-right: -18px; }
 .addnew .field { margin-bottom: 20px; *zoom: 1; }
 .addnew .field:after { content: " "; display: table; clear: both; }
 .addnew .field label { width: 120px; float: left; font-size: 17px; color: #34495e; font-family: semi, sans-serif; font-weight: normal; padding-top: 10px; }
@@ -150,3 +153,20 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .addnew .field input:-moz-placeholder, .addnew .field input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
 .addnew .field input::-webkit-input-placeholder { color: #cbcbcb; }
 .addnew .field .select { width: 266px; float: right; }
+
+.submit { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
+.submit i { margin-right: 10px; font-size: 19px; position: relative; top: 3px; }
+
+.amount { border-bottom: 1px solid #ebeff7; background: white; padding: 25px 0; }
+.amount h3 { font-family: semi, sans-serif; font-weight: normal; font-size: 18px; color: #515e78; margin-bottom: 23px; }
+
+.payout { border-bottom: 1px solid #ebeff7; background: white; padding: 25px 0; }
+.payout h3 { font-family: semi, sans-serif; font-weight: normal; font-size: 18px; color: #515e78; margin-bottom: 23px; }
+
+.input { border: 2px solid #bccdd5; border-radius: 3px; padding: 8px 16px; font-size: 17px; display: block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: proxima, sans-serif; font-weight: normal; }
+.input:-moz-placeholder, .input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
+.input::-webkit-input-placeholder { color: #cbcbcb; }
+.input.input_amount { font-family: "Source Code Pro", sans-serif; font-weight: 600; color: #677689; }
+
+.amountinput { position: relative; }
+.amountinput .amountinput__currency { position: absolute; right: 0; top: 0; bottom: 0; background: #bccdd5; color: white; width: 50px; z-index: 20; text-align: center; line-height: 42px; font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; }
