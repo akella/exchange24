@@ -79,8 +79,9 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select.select_dark .select__value { font-size: 14px; font-family: semi, sans-serif; font-weight: normal; }
 .select.select_green { border-color: #43b29e; width: auto; display: block; }
 
-.input-date { display: inline-block; margin-right: 10px; vertical-align: top; }
+.input-date { display: inline-block; margin-right: 10px; vertical-align: top; position: relative; }
 .input-date input { padding: 0 43px 0 7px; height: 26px; padding-top: 3px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 13px; color: #677689; border: 2px solid #677689; color: #495877; width: 80px; }
+.input-date i { position: absolute; right: 4px; top: 8px; line-height: 1; color: #70859d; font-size: 15px; width: 30px; }
 
 @font-face { font-family: iconset; src: url("fonts/untitled-font-2.eot"); src: url("fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"), url("fonts/untitled-font-2.woff") format("woff"), url("fonts/untitled-font-2.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 
@@ -109,6 +110,16 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .icon-add:before { content: "j"; }
 
 .icon-info:before { content: "k"; }
+
+.icon-twitter:before { content: "l"; }
+
+.icon-email:before { content: "m"; }
+
+.icon-facebook:before { content: "n"; }
+
+.icon-googleplus:before { content: "o"; }
+
+.icon-date:before { content: "p"; }
 
 .l-sidenav { position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; background: #445572; width: 80px; overflow: hidden; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .is-sidenav .l-sidenav { width: 225px; }
@@ -191,7 +202,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .userpartner .share { float: right; text-align: right; width: 40%; }
 .userpartner .referral__input { width: 280px; display: inline-block; margin-right: 7px; }
 .userpartner .referral__btn { display: inline-block; height: 40px; line-height: 40px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 17px; background: #70849d; color: white; padding: 0 13px; cursor: pointer; }
-.userpartner .share .share__service { display: inline-block; width: 50px; height: 40px; line-height: 40px; text-align: center; color: white; font-size: 24px; background: #70859d; margin-left: 5px; cursor: pointer; }
+.userpartner .share .share__service { display: inline-block; width: 50px; height: 40px; line-height: 50px; text-align: center; color: white; font-size: 24px; background: #70859d; margin-left: 5px; cursor: pointer; }
 
 .actions { *zoom: 1; }
 .actions:after { content: " "; display: table; clear: both; }
