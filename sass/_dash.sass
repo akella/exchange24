@@ -1,0 +1,74 @@
+.userstatus
+	text-align: center
+	font-size: 36px 
+	+bold
+	color: #48AEA0 
+	padding: 26px 0
+	&.is-unverified
+		color: #E06B6C 
+
+
+.userpartner
+	padding: 25px 
+	+clr
+	label
+		font-size: 17px 
+		color: #515E77 
+		+semi
+		margin-bottom: 15px 
+		display: block
+	.referral
+		float: left
+		label
+		width: 50% 
+	.share
+		float: right
+		text-align: right
+		width: 40% 
+	.referral__input
+		@extend .input
+		width: 280px 
+		display: inline-block
+		margin-right: 7px 
+	.referral__btn
+		display: inline-block
+		height: 40px 
+		line-height: 40px
+		border-radius: 3px
+		+semi
+		font-size: 17px 
+		background: #70849D
+		color: #fff  
+		padding: 0 13px 
+		cursor: pointer
+	.share
+		.share__service
+			display: inline-block
+			width: 50px 
+			height: 40px 
+			line-height: 40px
+			text-align: center
+			color: #fff
+			font-size: 24px   
+			background: #70859D 
+			border-radius 3px
+			margin-left: 5px 
+			cursor: pointer
+.actions
+	+clr
+	.submit
+		float: left
+		width: 50%
+		&:first-child
+			border-bottom-right-radius: 0
+			box-shadow: 2px 0 0 #fff
+			position: relative
+
+		&:last-child
+			border-bottom-left-radius: 0
+.transinfo
+	width: 635px 
+	margin: 0 auto
+	background: #fff  
+	border: 1px solid #E6EEF2 
+	border-radius: 3px

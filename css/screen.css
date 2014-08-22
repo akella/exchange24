@@ -37,6 +37,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .header h2 { float: left; font-family: semi, sans-serif; font-weight: normal; font-size: 21px; }
 .header .header__add { float: right; background: #44afa1; height: 40px; line-height: 40px; border-radius: 3px; font-size: 17px; color: white; padding: 0 13px; margin: 9px 9px 0 0; cursor: pointer; }
 .header .header__add i { display: inline-block; vertical-align: middle; position: relative; top: 2px; font-size: 14px; margin-right: 8px; }
+.header .header__right { float: right; text-align: right; font-size: 21px; color: #485878; margin-right: 25px; }
+.header .header__right strong { font-family: bold, sans-serif; font-weight: normal; color: #3db39e; margin-left: 5px; }
 
 .table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .table th, .table td { font-weight: normal; border-bottom: 1px solid #ebeff6; padding: 17px 14px; text-align: left; font-size: 18px; color: #455473; }
@@ -54,6 +56,12 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__date { padding-left: 25px; padding-right: 20px; padding-top: 0; padding-bottom: 0; font-size: 30px; text-align: left; line-height: 0.8; text-transform: uppercase; width: 44px; vertical-align: middle; font-family: "Source Code Pro", sans-serif; font-weight: 300; }
 .table .table__date span { display: block; font-size: 17px; font-family: bold, sans-serif; font-weight: normal; }
 .table .table__time { padding-left: 0; font-family: "Source Code Pro", sans-serif; font-weight: 400; }
+.table .table__more { padding: 10px 0; background: #f9fafb; }
+.table .table__right { text-align: right; }
+.table .table__footer td { background: #ebeff6; border-top: 2px solid #bcccd5; font-family: semi, sans-serif; font-weight: normal; }
+.table .table__footer .table__amount { font-family: "Source Code Pro", sans-serif; font-weight: 700; }
+.table.table_small td { font-size: 15px !important; padding: 14px 20px; }
+.table.table_small td + td { font-size: 17px !important; }
 
 .filters { *zoom: 1; padding: 15px 25px; border-bottom: 1px solid #ebeff6; font-size: 0; }
 .filters:after { content: " "; display: table; clear: both; }
@@ -157,6 +165,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .submit { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
 .submit i { margin-right: 10px; font-size: 19px; position: relative; top: 3px; }
+.submit.submit_notlast { border-radius: 0; }
 
 .amount { border-bottom: 1px solid #ebeff7; background: white; padding: 25px 0; }
 .amount h3 { font-family: semi, sans-serif; font-weight: normal; font-size: 18px; color: #515e78; margin-bottom: 20px; }
@@ -164,10 +173,30 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .payout { border-bottom: 1px solid #ebeff7; background: white; padding: 25px 0; }
 .payout h3 { font-family: semi, sans-serif; font-weight: normal; font-size: 18px; color: #515e78; margin-bottom: 20px; }
 
-.input { border: 2px solid #bccdd5; border-radius: 3px; padding: 8px 16px; font-size: 17px; display: block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: proxima, sans-serif; font-weight: normal; }
-.input:-moz-placeholder, .input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
-.input::-webkit-input-placeholder { color: #cbcbcb; }
-.input.input_amount { font-family: "Source Code Pro", sans-serif; font-weight: 600; color: #677689; }
+.input, .userpartner .referral__input { border: 2px solid #bccdd5; border-radius: 3px; padding: 8px 16px; font-size: 17px; display: block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: proxima, sans-serif; font-weight: normal; }
+.input:-moz-placeholder, .userpartner .referral__input:-moz-placeholder, .input::-moz-placeholder, .userpartner .referral__input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
+.input::-webkit-input-placeholder, .userpartner .referral__input::-webkit-input-placeholder { color: #cbcbcb; }
+.input.input_amount, .userpartner .input_amount.referral__input { font-family: "Source Code Pro", sans-serif; font-weight: 600; color: #677689; }
 
 .amountinput { position: relative; }
 .amountinput .amountinput__currency { position: absolute; right: 0; top: 0; bottom: 0; background: #bccdd5; color: white; width: 50px; z-index: 20; text-align: center; line-height: 42px; font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; }
+
+.userstatus { text-align: center; font-size: 36px; font-family: bold, sans-serif; font-weight: normal; color: #48aea0; padding: 26px 0; }
+.userstatus.is-unverified { color: #e06b6c; }
+
+.userpartner { padding: 25px; *zoom: 1; }
+.userpartner:after { content: " "; display: table; clear: both; }
+.userpartner label { font-size: 17px; color: #515e77; font-family: semi, sans-serif; font-weight: normal; margin-bottom: 15px; display: block; }
+.userpartner .referral { float: left; width: 50%; }
+.userpartner .share { float: right; text-align: right; width: 40%; }
+.userpartner .referral__input { width: 280px; display: inline-block; margin-right: 7px; }
+.userpartner .referral__btn { display: inline-block; height: 40px; line-height: 40px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 17px; background: #70849d; color: white; padding: 0 13px; cursor: pointer; }
+.userpartner .share .share__service { display: inline-block; width: 50px; height: 40px; line-height: 40px; text-align: center; color: white; font-size: 24px; background: #70859d; margin-left: 5px; cursor: pointer; }
+
+.actions { *zoom: 1; }
+.actions:after { content: " "; display: table; clear: both; }
+.actions .submit { float: left; width: 50%; }
+.actions .submit:first-child { border-bottom-right-radius: 0; box-shadow: 2px 0 0 white; position: relative; }
+.actions .submit:last-child { border-bottom-left-radius: 0; }
+
+.transinfo { width: 635px; margin: 0 auto; background: white; border: 1px solid #e6eef2; border-radius: 3px; }

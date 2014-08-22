@@ -131,7 +131,16 @@ body
 			top: 2px  
 			font-size: 14px 
 			margin-right: 8px 
-
+	.header__right
+		float: right
+		text-align: right
+		font-size: 21px 
+		color: #485878
+		margin-right: 25px 
+		strong
+			+bold
+			color: #3DB39E
+			margin-left: 5px 
 .table
 	border-spacing: 0
 	border-collapse: collapse
@@ -200,7 +209,26 @@ body
 	.table__time
 		padding-left: 0 
 		+snormal
+	.table__more
+		padding: 10px 0
+		background: #F9FAFB  
+	.table__right
+		text-align: right
+	.table__footer
+		td
+			background: #EBEFF6
+			border-top: 2px solid #BCCCD5  
+			+semi
+		.table__amount
+			+sbold
 
+	&.table_small
+		td
+			font-size: 15px !important
+			padding: 14px 20px 
+		td+td
+			font-size: 17px !important
+		
 .filters
 	+clr
 	padding: 15px 25px 
