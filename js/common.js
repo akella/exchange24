@@ -14,4 +14,7 @@ head.ready(function() {
 	$('.user').click(function(event) {
 		$(this).toggleClass('is-active');
 	});
+	$('.select').click(function(event) {
+		$(this).toggleClass('is-active');
+	});
 });

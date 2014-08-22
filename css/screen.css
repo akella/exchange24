@@ -31,6 +31,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .b { background: white; margin-bottom: 30px; border-radius: 2px; }
 
 .btn { background: #43b29e; border-radius: 3px; min-width: 105px; height: 33px; line-height: 33px; white-space: nowrap; padding: 0 10px; font-size: 14px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
+.btn:hover { background: #358d7d; }
 
 .header { border-bottom: 2px solid #485878; height: 58px; line-height: 58px; padding-left: 25px; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
@@ -44,9 +45,11 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table th, .table td { font-weight: normal; border-bottom: 1px solid #ebeff6; padding: 17px 14px; text-align: left; font-size: 18px; color: #455473; }
 .table tr:last-child td, .table tr:last-child th { border-bottom: none; }
 .table .table__edit, .table .table__info, .table .table__remove { background: #70859d; width: 38px; padding: 0; text-align: center; color: white; cursor: pointer; }
+.table .table__edit:hover, .table .table__info:hover, .table .table__remove:hover { background: #596c81; background: white; box-shadow: inset 0 0 0 2px #70859d; color: #70859d; }
 .table .table__edit i, .table .table__info i, .table .table__remove i { position: relative; top: 3px; }
-.table .table__remove { background: #ecaaab; }
-.table .table__remove i { top: 3px; }
+.table .table__remove { background: #ecaaab; font-size: 23px; }
+.table .table__remove:hover { background: #e06b6c; background: white; box-shadow: inset 0 0 0 2px #e06b6c; color: #e06b6c; }
+.table .table__remove i { top: 5px; }
 .table .table__green { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table .table__currency { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; margin-left: 10px; }
 .table .table__font { font-family: "Source Code Pro", sans-serif; font-weight: 400; }
@@ -74,13 +77,23 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select .select__value { font-size: 17px; }
 .select select { opacity: 0; position: absolute; height: 100%; top: 0; left: 0; -webkit-appearance: none; z-index: 1; width: 100%; }
 .select.select_dark { border: none; width: auto; padding: 0 23px 0 10px; height: 33px; line-height: 33px; color: white; background: #70859d; margin-right: 10px; vertical-align: top; }
+.select.select_dark:hover { background: #596c81; }
 .select.select_dark i { top: 10px; line-height: 1; right: 8px; }
 .select.select_dark i:before { color: white !important; }
 .select.select_dark .select__value { font-size: 14px; font-family: semi, sans-serif; font-weight: normal; }
 .select.select_green { border-color: #43b29e; width: auto; display: block; }
+.select .select__subvalue { position: absolute; right: 30px; top: 10px; font-size: 14px; color: #43b29e; }
+.select.is-active .select__drop { display: block; }
+.select .select__drop { position: absolute; top: 50px; left: -2px; width: 100%; border: 2px solid #bccdd5; display: none; background: white; z-index: 1000; border-radius: 3px; }
+.select .select__drop ul { list-style: none; }
+.select .select__drop ul li { position: relative; cursor: pointer; border-bottom: 1px solid #e6eef2; }
+.select .select__drop ul li .select__subvalue { right: 14px; }
+.select .select__drop ul li img { display: block; }
+.select .select__drop ul li:last-child { border-bottom: none; }
 
 .input-date { display: inline-block; margin-right: 10px; vertical-align: top; position: relative; }
 .input-date input { padding: 0 43px 0 7px; height: 26px; padding-top: 3px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 13px; color: #677689; border: 2px solid #677689; color: #495877; width: 80px; }
+.input-date input:focus { border-color: #515d6c; color: #515d6c; }
 .input-date i { position: absolute; right: 4px; top: 8px; line-height: 1; color: #70859d; font-size: 15px; width: 30px; }
 
 @font-face { font-family: iconset; src: url("fonts/untitled-font-2.eot"); src: url("fonts/untitled-font-2.eot?#iefix") format("embedded-opentype"), url("fonts/untitled-font-2.woff") format("woff"), url("fonts/untitled-font-2.ttf") format("truetype"); font-weight: normal; font-style: normal; }
@@ -160,7 +173,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .top .top__current .top__select .top__selectdrop ul a { text-decoration: none; display: block; color: #455473; font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; padding-left: 15px; padding-top: 8px; padding-bottom: 8px; }
 .top .top__current .top__select .top__selectdrop ul a:hover { background: #f9fafb; color: #49aea1; }
 .top .top__right { float: right; margin-right: 50px; white-space: nowrap; }
-.top .top__right .usernav { list-style: none; font-size: 0; display: inline-block; vertical-align: top; font-family: semi, sans-serif; font-weight: normal; }
+.top .top__right .usernav { list-style: none; font-size: 0; display: inline-block; vertical-align: top; text-transform: uppercase; font-family: semi, sans-serif; font-weight: normal; }
 .top .top__right .usernav li { display: inline-block; vertical-align: top; }
 .top .top__right .usernav a { display: inline-block; vertical-align: top; height: 56px; line-height: 62px; font-size: 15px; padding-bottom: 6px; text-decoration: none; color: #455473; margin-right: 30px; margin-right: 25px; }
 .top .top__right .usernav a.is-active, .top .top__right .usernav a:hover { border-bottom: 6px solid #49aea1; padding-bottom: 0; }
@@ -190,9 +203,11 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .addnew .field input { border: 2px solid #bccdd5; border-radius: 3px; padding: 8px 16px; font-size: 17px; width: 266px; font-family: proxima, sans-serif; font-weight: normal; }
 .addnew .field input:-moz-placeholder, .addnew .field input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
 .addnew .field input::-webkit-input-placeholder { color: #cbcbcb; }
+.addnew .field input:focus { border-color: #49aea1; }
 .addnew .field .select { width: 266px; float: right; }
 
 .submit { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
+.submit:hover { background: #358d7d; }
 .submit i { margin-right: 10px; font-size: 19px; position: relative; top: 3px; }
 .submit.submit_notlast { border-radius: 0; }
 
@@ -205,9 +220,12 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .input, .userpartner .referral__input { border: 2px solid #bccdd5; border-radius: 3px; padding: 8px 16px; font-size: 17px; display: block; width: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: proxima, sans-serif; font-weight: normal; }
 .input:-moz-placeholder, .userpartner .referral__input:-moz-placeholder, .input::-moz-placeholder, .userpartner .referral__input::-moz-placeholder { color: #cbcbcb; opacity: 1; }
 .input::-webkit-input-placeholder, .userpartner .referral__input::-webkit-input-placeholder { color: #cbcbcb; }
+.input:focus, .userpartner .referral__input:focus { border-color: #49aea1; }
 .input.input_amount, .userpartner .input_amount.referral__input { font-family: "Source Code Pro", sans-serif; font-weight: 600; color: #677689; }
 
 .amountinput { position: relative; }
+.amountinput input:focus { border-color: #49aea1; }
+.amountinput input:focus + .amountinput__currency { background: #49aea1; }
 .amountinput .amountinput__currency { position: absolute; right: 0; top: 0; bottom: 0; background: #bccdd5; color: white; width: 50px; z-index: 20; text-align: center; line-height: 42px; font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; }
 
 .userstatus { text-align: center; font-size: 36px; font-family: bold, sans-serif; font-weight: normal; color: #48aea0; padding: 26px 0; }
@@ -220,7 +238,9 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .userpartner .share { float: right; text-align: right; width: 40%; }
 .userpartner .referral__input { width: 280px; display: inline-block; margin-right: 7px; }
 .userpartner .referral__btn { display: inline-block; height: 40px; line-height: 40px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 17px; background: #70849d; color: white; padding: 0 13px; cursor: pointer; }
+.userpartner .referral__btn:hover { background: #596c81; }
 .userpartner .share .share__service { display: inline-block; width: 50px; height: 40px; line-height: 50px; text-align: center; color: white; font-size: 24px; background: #70859d; margin-left: 5px; cursor: pointer; }
+.userpartner .share .share__service:hover { background: #596c81; }
 
 .actions { *zoom: 1; }
 .actions:after { content: " "; display: table; clear: both; }
