@@ -8,7 +8,6 @@
 		+lite
 		font-size: 15px 
 		text-transform: uppercase
-		
 		.top__buyprice
 			+ssemi
 			font-size: 17px 
@@ -25,6 +24,8 @@
 			line-height: 1 
 			position: relative
 			top: -1px 
+			cursor: pointer
+			+sbold
 			select
 				opacity: 0
 				position: absolute
@@ -38,6 +39,34 @@
 				vertical-align: middle
 				position: relative
 				top: -2px 
+			&.is-active
+				.top__selectdrop
+					display: block
+			.top__selectdrop
+				position: absolute
+				top: 43px 
+				right: -15px
+				width: 30px  
+				z-index: 1000 
+				border: 1px solid #BCCDD5 
+				border-radius: 3px
+				width: 77px 
+				background: #FFFFFF 
+				display: none
+				ul
+					list-style: none
+					a
+						text-decoration: none
+						display: block
+						color: #455473
+						+sbold
+						font-size: 17px  
+						padding-left: 15px 
+						padding-top: 8px 
+						padding-bottom: 8px 
+						&:hover
+							background: #F9FAFB
+							color: #49AEA1  
 	.top__right
 		float: right
 		margin-right: 50px 
@@ -76,6 +105,43 @@
 			top: -2px 
 			i
 				margin-left: 6px 
+			&.is-active
+				.user__drop
+					display: block
+			.user__drop
+				display: none
+				position: absolute
+				top: 67px 
+				right: 0
+				width: 30px  
+				z-index: 1000 
+				border: 1px solid #BCCDD5 
+				border-radius: 3px
+				width: 125px 
+				background: #FFFFFF 
+				display: none
+				ul
+					list-style: none
+				a
+					display: block
+					display: block
+					position: relative
+					font-size: 15px 
+					color: #455473 
+					text-decoration: none
+					line-height: 1
+					padding-left: 45px  
+					padding-top: 10px 
+					padding-bottom: 10px 
+					&:hover
+						color: #49ADA0 
+						background: #F9FAFB 
+					i
+						position: absolute
+						left: 5px 
+						top: 10px 
+				.user__logout
+					border-top: 1px solid #E6EEF2 
 .exchange
 	height: 80px 
 	line-height: 80px

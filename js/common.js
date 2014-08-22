@@ -7,5 +7,11 @@ head.ready(function() {
 	$('.js-toggle').click(function(event) {
 		$('#'+$(this).data('toggle')).slideToggle();
 	});
+	$('.top__select').click(function(event) {
+		$(this).toggleClass('is-active');
+	});
 
+	$('.user').click(function(event) {
+		$(this).toggleClass('is-active');
+	});
 });
