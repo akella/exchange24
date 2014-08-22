@@ -36,7 +36,14 @@
 			BUY PRICE <strong class="top__buyprice">$ 593.30</strong>
 			<div class="top__select">
 				<span class="top__selectvalue">USD</span><i class="icon-arrow"></i>
-				<select name="" id=""><option value="">BTC</option></select>
+				<div class="top__selectdrop">
+					<ul>
+						<li><a href="#">EUR</a></li>
+						<li><a href="#">USD</a></li>
+						<li><a href="#">GBP</a></li>
+						<li><a href="#">RUR</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- end top__current -->
@@ -50,6 +57,13 @@
 			</ul>
 			<div class="user">
 				<div class="user__name">sean.j.yao@gmail.com<i class="icon-arrow"></i></div>
+				<div class="user__drop">
+					<ul>
+						<li><a href="#"><i class="icon-settings"></i>Settings</a></li>
+						<li><a href="#"><i class="icon-help"></i>Help</a></li>
+						<li class="user__logout"><a href="#"><i class="icon-logout"></i>Logout</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- end top__right -->
@@ -88,17 +102,17 @@
 					</div>
 					<div class="field">
 						<label for="">Country</label>
-						<div class="select">
+						<div class="select js-genericselect">
 							<div class="select__value">United States</div>
-							<select name="" id=""><option value="u">Ukraine</option><option value="B">Russia</option></select>
+							<select name="" id=""><option value="ukraine">Ukraine</option><option value="Russia">Russia</option></select>
 							<i class="icon-arrow"></i>
 						</div>
 					</div>
 					<div class="field">
 						<label for="">Currency</label>
-						<div class="select">
+						<div class="select js-genericselect">
 							<div class="select__value">USD</div>
-							<select name="" id=""><option value="u">usd</option><option value="B">BTC</option></select>
+							<select name="" id=""><option value="usd">usd</option><option value="BTC">BTC</option></select>
 							<i class="icon-arrow"></i>
 						</div>
 					</div>
@@ -107,8 +121,8 @@
 			</div>
 			<div class="filters">
 				<div class="filters__left">
-					<div class="select select_dark"><div class="select__value">All types <i class="icon-arrow"></i></div><select name="" id=""><option value="11">111</option></select></div>
-					<div class="select select_dark"><div class="select__value">Custom<i class="icon-arrow"></i></div><select name="" id=""><option value="11">111</option></select></div>
+					<div class="select select_dark  js-genericselect"><div class="select__value">All types</div><i class="icon-arrow"></i><select name="" id=""><option value="222">222</option><option value="11">111</option></select></div>
+					<div class="select select_dark js-genericselect"><div class="select__value">Custom</div><i class="icon-arrow"></i><select name="" id=""><option value="11">111</option><option value="22">222</option></select></div>
 					<div class="input-date"><input type="text" value="2014.04.04" class="input-date"><i class="icon-date"></i></div>
 					<div class="input-date"><input type="text" value="2014.04.04" class="input-date"><i class="icon-date"></i></div>
 				</div>

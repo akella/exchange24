@@ -262,11 +262,14 @@ body
 	position: relative
 	display: inline-block
 	border-radius: 3px
-	padding: 8px 16px 	
+	padding: 0px 16px 	
+	height: 41px 
+	line-height: 41px 
 	i
 		position: absolute
 		right: 15px
-		top: 12px  
+		top: 15px  
+		line-height: 1 
 	.select__value
 		font-size: 17px 
 	select
@@ -291,7 +294,7 @@ body
 		&:hover
 			background: darken(#70859D, 10%)
 		i
-			top: 10px 
+			top: 13px 
 			line-height: 1 
 			right: 8px 
 			&:before
@@ -306,9 +309,10 @@ body
 	.select__subvalue
 		position: absolute
 		right: 30px 
-		top: 10px 
+		top: 14px 
 		font-size: 14px 
 		color: #43B29E 
+		line-height: 1 
 	&.is-active
 		.select__drop
 			display: block

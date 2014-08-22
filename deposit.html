@@ -36,7 +36,14 @@
 			BUY PRICE <strong class="top__buyprice">$ 593.30</strong>
 			<div class="top__select">
 				<span class="top__selectvalue">USD</span><i class="icon-arrow"></i>
-				<select name="" id=""><option value="">BTC</option></select>
+				<div class="top__selectdrop">
+					<ul>
+						<li><a href="#">EUR</a></li>
+						<li><a href="#">USD</a></li>
+						<li><a href="#">GBP</a></li>
+						<li><a href="#">RUR</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- end top__current -->
@@ -50,6 +57,13 @@
 			</ul>
 			<div class="user">
 				<div class="user__name">sean.j.yao@gmail.com<i class="icon-arrow"></i></div>
+				<div class="user__drop">
+					<ul>
+						<li><a href="#"><i class="icon-settings"></i>Settings</a></li>
+						<li><a href="#"><i class="icon-help"></i>Help</a></li>
+						<li class="user__logout"><a href="#"><i class="icon-logout"></i>Logout</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<!-- end top__right -->
@@ -85,9 +99,13 @@
 			<div class="payout">
 				<div class="payout__in">
 					<h3>Select Deposit Method</h3>
-					<div class="select select_green">
-						<div class="select__value">Add New Bank Account</div>
+					<div class="select select_green js-payout">
+						<div class="select__valuewrap">
+							<div class="select__value">Add New Bank Account</div>
+							<div class="select__subvalue">Instant</div>
+						</div>
 						<i class="icon-arrow"></i>
+
 						<div class="select__drop">
 							<ul>
 								<li>
@@ -96,6 +114,14 @@
 								</li>
 								<li>
 									<div class="select__value"><img src="img/logo2.png" alt=""></div>
+									<div class="select__subvalue">1-3days</div>
+								</li>
+								<li>
+									<div class="select__value"><img src="img/logo3.png" alt=""></div>
+									<div class="select__subvalue">Instant</div>
+								</li>
+								<li>
+									<div class="select__value"><img src="img/logo4.png" alt=""></div>
 									<div class="select__subvalue">1-3days</div>
 								</li>
 							</ul>
