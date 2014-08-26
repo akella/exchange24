@@ -1,0 +1,140 @@
+.b_white
+	background: #fff 
+	+clr
+%label
+	display: block
+	font-size: 19px
+	color: #3DB39E
+	margin-bottom: 14px  
+	+bold
+.layout
+	.l-col1
+		float: left
+		width: 470px 
+	.l-col2
+		float: right
+		width: 382px 
+		background: #BCCDD5 
+		.l-col2__inner
+			padding: 15px 
+
+.prove
+	padding: 14px 20px
+	background: #fff   
+	.prove__title
+		+bold
+		font-size: 19px 
+		margin-bottom: 14px 
+		color: #3DB39E 
+	p
+		+lite
+		font-size: 15px 
+		color: #515E78 
+		margin-bottom: 14px 
+
+.typefield
+	margin-bottom: 15px 
+	position: relative
+	.typefield__icon
+		position: absolute
+		left: 0
+		top: 0 
+		height: 40px  
+		width: 40px 
+		text-align: center
+		color: #fff 
+		background: #BCCDD5 
+		line-height: 40px
+		font-size: 21px  
+		i
+			position: relative
+			top: 4px 
+	input
+		padding-left: 51px 
+	input:focus + .typefield__icon
+		background: #49AEA1 
+.prove__checkbox
+	padding-left: 41px 
+	position: relative
+	+lite
+	font-size: 13px 
+	color: #515E78 
+	label
+		cursor: pointer
+	input
+		display: none
+	i
+		display: inline-block
+		width: 16px 
+		height: 16px 
+		border: 2px solid #BCCDD5 
+		border-radius: 2px
+		background: #fff 
+		position: absolute
+		left: 10px 
+		top: 4px 
+	input:checked + i
+		background: #43B29E 
+		
+.pleasenote
+	border-top: 1px solid #EBEFF6 
+	background: #fff 
+	padding: 29px 26px 
+	.pleasenote__message
+		border: 1px solid #49AEA1 
+		background: #F7FBFA
+		padding: 12px 15px
+		color: #49AEA1
+		font-size: 12px    
+.paywith
+	padding: 33px 26px
+	border-top: 1px solid #EBEFF6 
+	label
+		@extend %label
+.qr
+	padding: 25px 26px 
+	border-top: 1px solid #EBEFF6 
+	label
+		@extend %label
+	.qrinput
+		position: relative
+		input
+			padding-right: 60px 
+		.qrinput__icon
+			position: absolute
+			right: 0
+			top: 0
+			height: 40px   
+			width: 45px 
+			line-height: 45px 
+			text-align: center
+			font-size: 24px 
+			color: #fff
+			background: #67768A  
+			i
+				position: relative
+				top: 2px 
+.note
+	font-size: 13px 
+	+lite
+	color: #515E78
+	margin-top: 10px  
+	a
+		+semi
+		color: #3DB39E
+		text-decoration: none 
+.spendbuy
+	padding: 24px 26px
+	label
+		@extend %label
+	input
+		text-align: right
+		padding-right: 60px 
+	.spendbuy__spend,.spendbuy__buy
+		float: left
+		margin-bottom: 10px 
+		width: 50% 
+	.notes
+		clear: both
+	input,.amountinput__currency
+		border-radius: 0

@@ -65,6 +65,11 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__footer .table__amount { font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table.table_small td { font-size: 15px !important; padding: 14px 20px; }
 .table.table_small td + td { font-size: 17px !important; }
+.table.table_due { margin-bottom: 15px; background: white; }
+.table.table_due td { border: none; font-size: 17px !important; padding: 9px 20px; }
+.table.table_due tbody tr:first-child td { padding-top: 14px; }
+.table.table_due tbody tr:last-child td { padding-bottom: 14px; }
+.table.table_due tfoot td { background: #445572; color: white; border-top: 2px solid #bccdd5; padding: 14px 20px; }
 
 .filters { *zoom: 1; padding: 15px 25px; border-bottom: 1px solid #ebeff6; font-size: 0; }
 .filters:after { content: " "; display: table; clear: both; }
@@ -139,6 +144,20 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .icon-settings:before { content: "r"; }
 
 .icon-help:before { content: "s"; }
+
+.icon-arrleft:before { content: "t"; }
+
+.icon-arrright:before { content: "u"; }
+
+.icon-back:before { content: "v"; }
+
+.icon-btc:before { content: "w"; }
+
+.icon-check:before { content: "x"; }
+
+.icon-qr:before { content: "y"; }
+
+.icon-phone:before { content: "z"; }
 
 .l-sidenav { position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; background: #445572; width: 80px; overflow: hidden; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .is-sidenav .l-sidenav { width: 225px; }
@@ -227,6 +246,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .amountinput input:focus { border-color: #49aea1; }
 .amountinput input:focus + .amountinput__currency { background: #49aea1; }
 .amountinput .amountinput__currency { position: absolute; right: 0; top: 0; bottom: 0; background: #bccdd5; color: white; width: 50px; z-index: 20; text-align: center; line-height: 42px; font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; }
+.amountinput .amountinput__approx { position: absolute; left: 10px; line-height: 1; top: 7px; font-size: 30px; color: #67768a; }
+.amountinput.amountinput_inactive input { background: #eaf0f2; }
 
 .userstatus { text-align: center; font-size: 36px; font-family: bold, sans-serif; font-weight: normal; color: #48aea0; padding: 26px 0; }
 .userstatus.is-unverified { color: #e06b6c; }
@@ -249,3 +270,48 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .actions .submit:last-child { border-bottom-left-radius: 0; }
 
 .transinfo { width: 635px; margin: 0 auto; background: white; border: 1px solid #e6eef2; border-radius: 3px; }
+
+.b_white { background: white; *zoom: 1; }
+.b_white:after { content: " "; display: table; clear: both; }
+
+.paywith label, .qr label, .spendbuy label { display: block; font-size: 19px; color: #3db39e; margin-bottom: 14px; font-family: bold, sans-serif; font-weight: normal; }
+
+.layout .l-col1 { float: left; width: 470px; }
+.layout .l-col2 { float: right; width: 382px; background: #bccdd5; }
+.layout .l-col2 .l-col2__inner { padding: 15px; }
+
+.prove { padding: 14px 20px; background: white; }
+.prove .prove__title { font-family: bold, sans-serif; font-weight: normal; font-size: 19px; margin-bottom: 14px; color: #3db39e; }
+.prove p { font-family: lite, sans-serif; font-weight: normal; font-size: 15px; color: #515e78; margin-bottom: 14px; }
+
+.typefield { margin-bottom: 15px; position: relative; }
+.typefield .typefield__icon { position: absolute; left: 0; top: 0; height: 40px; width: 40px; text-align: center; color: white; background: #bccdd5; line-height: 40px; font-size: 21px; }
+.typefield .typefield__icon i { position: relative; top: 4px; }
+.typefield input { padding-left: 51px; }
+.typefield input:focus + .typefield__icon { background: #49aea1; }
+
+.prove__checkbox { padding-left: 41px; position: relative; font-family: lite, sans-serif; font-weight: normal; font-size: 13px; color: #515e78; }
+.prove__checkbox label { cursor: pointer; }
+.prove__checkbox input { display: none; }
+.prove__checkbox i { display: inline-block; width: 16px; height: 16px; border: 2px solid #bccdd5; border-radius: 2px; background: white; position: absolute; left: 10px; top: 4px; }
+.prove__checkbox input:checked + i { background: #43b29e; }
+
+.pleasenote { border-top: 1px solid #ebeff6; background: white; padding: 29px 26px; }
+.pleasenote .pleasenote__message { border: 1px solid #49aea1; background: #f7fbfa; padding: 12px 15px; color: #49aea1; font-size: 12px; }
+
+.paywith { padding: 33px 26px; border-top: 1px solid #ebeff6; }
+
+.qr { padding: 25px 26px; border-top: 1px solid #ebeff6; }
+.qr .qrinput { position: relative; }
+.qr .qrinput input { padding-right: 60px; }
+.qr .qrinput .qrinput__icon { position: absolute; right: 0; top: 0; height: 40px; width: 45px; line-height: 45px; text-align: center; font-size: 24px; color: white; background: #67768a; }
+.qr .qrinput .qrinput__icon i { position: relative; top: 2px; }
+
+.note { font-size: 13px; font-family: lite, sans-serif; font-weight: normal; color: #515e78; margin-top: 10px; }
+.note a { font-family: semi, sans-serif; font-weight: normal; color: #3db39e; text-decoration: none; }
+
+.spendbuy { padding: 24px 26px; }
+.spendbuy input { text-align: right; padding-right: 60px; }
+.spendbuy .spendbuy__spend, .spendbuy .spendbuy__buy { float: left; margin-bottom: 10px; width: 50%; }
+.spendbuy .notes { clear: both; }
+.spendbuy input, .spendbuy .amountinput__currency { border-radius: 0; }
