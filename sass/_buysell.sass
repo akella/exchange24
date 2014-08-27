@@ -20,7 +20,8 @@
 
 .prove
 	padding: 14px 20px
-	background: #fff   
+	background: #fff
+	min-height: 230px
 	.prove__title
 		+bold
 		font-size: 19px 
@@ -31,6 +32,29 @@
 		font-size: 15px 
 		color: #515E78 
 		margin-bottom: 14px 
+	&.prove_code
+		padding-top: 70px 
+		min-height: 170px 
+		.prove__codeenter
+			margin-right: 50px 
+			position: relative
+		.prove__cancel
+			position: absolute
+			right: -50px
+			top: 0
+			width: 45px   
+			height: 40px 
+			line-height: 40px
+			background: #EEA6A6
+			cursor: pointer
+			color: #fff
+			text-align: center
+			font-size: 25px  
+			i
+				position: relative
+				top: 4px 
+			&:hover
+				background: darken(#EEA6A6, 10%) 
 
 .typefield
 	margin-bottom: 15px 
@@ -91,6 +115,13 @@
 	border-top: 1px solid #EBEFF6 
 	label
 		@extend %label
+		position: relative
+	.info
+		position: absolute
+		right: 0
+		top: 6px 
+		cursor: pointer
+		color: #44AFA1  
 .qr
 	padding: 25px 26px 
 	border-top: 1px solid #EBEFF6 

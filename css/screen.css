@@ -87,7 +87,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select.select_dark i:before { color: white !important; }
 .select.select_dark .select__value { font-size: 14px; font-family: semi, sans-serif; font-weight: normal; }
 .select.select_green { border-color: #43b29e; width: auto; display: block; }
-.select .select__subvalue { position: absolute; right: 30px; top: 14px; font-size: 14px; color: #43b29e; line-height: 1; }
+.select .select__subvalue { position: absolute; right: 30px; top: 14px; font-size: 14px; color: #43b29e; line-height: 1; white-space: nowrap; }
+.select .select__subvalue .select__money { margin-left: 55px; font-family: "Source Code Pro", sans-serif; font-weight: 600; font-size: 17px; color: #455473; vertical-align: middle; display: inline-block; position: relative; top: -2px; }
 .select.is-active .select__drop { display: block; }
 .select .select__drop { position: absolute; top: 50px; left: -2px; width: 100%; border: 2px solid #bccdd5; display: none; background: white; z-index: 1000; border-radius: 3px; }
 .select .select__drop ul { list-style: none; }
@@ -246,7 +247,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .amountinput input:focus { border-color: #49aea1; }
 .amountinput input:focus + .amountinput__currency { background: #49aea1; }
 .amountinput .amountinput__currency { position: absolute; right: 0; top: 0; bottom: 0; background: #bccdd5; color: white; width: 50px; z-index: 20; text-align: center; line-height: 42px; font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; }
-.amountinput .amountinput__approx { position: absolute; left: 10px; line-height: 1; top: 7px; font-size: 30px; color: #67768a; }
+.amountinput .amountinput__approx { position: absolute; left: 10px; line-height: 1; top: 11px; font-size: 20px; color: #67768a; }
 .amountinput.amountinput_inactive input { background: #eaf0f2; }
 
 .userstatus { text-align: center; font-size: 36px; font-family: bold, sans-serif; font-weight: normal; color: #48aea0; padding: 26px 0; }
@@ -280,9 +281,14 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .layout .l-col2 { float: right; width: 382px; background: #bccdd5; }
 .layout .l-col2 .l-col2__inner { padding: 15px; }
 
-.prove { padding: 14px 20px; background: white; }
+.prove { padding: 14px 20px; background: white; min-height: 230px; }
 .prove .prove__title { font-family: bold, sans-serif; font-weight: normal; font-size: 19px; margin-bottom: 14px; color: #3db39e; }
 .prove p { font-family: lite, sans-serif; font-weight: normal; font-size: 15px; color: #515e78; margin-bottom: 14px; }
+.prove.prove_code { padding-top: 70px; min-height: 170px; }
+.prove.prove_code .prove__codeenter { margin-right: 50px; position: relative; }
+.prove.prove_code .prove__cancel { position: absolute; right: -50px; top: 0; width: 45px; height: 40px; line-height: 40px; background: #eea6a6; cursor: pointer; color: white; text-align: center; font-size: 25px; }
+.prove.prove_code .prove__cancel i { position: relative; top: 4px; }
+.prove.prove_code .prove__cancel:hover { background: #e67b7b; }
 
 .typefield { margin-bottom: 15px; position: relative; }
 .typefield .typefield__icon { position: absolute; left: 0; top: 0; height: 40px; width: 40px; text-align: center; color: white; background: #bccdd5; line-height: 40px; font-size: 21px; }
@@ -300,6 +306,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .pleasenote .pleasenote__message { border: 1px solid #49aea1; background: #f7fbfa; padding: 12px 15px; color: #49aea1; font-size: 12px; }
 
 .paywith { padding: 33px 26px; border-top: 1px solid #ebeff6; }
+.paywith label { position: relative; }
+.paywith .info { position: absolute; right: 0; top: 6px; cursor: pointer; color: #44afa1; }
 
 .qr { padding: 25px 26px; border-top: 1px solid #ebeff6; }
 .qr .qrinput { position: relative; }
