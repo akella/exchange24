@@ -23,6 +23,8 @@
 			width: auto
 			.l-col2__inner
 				padding: 25px 
+				.table
+					margin-bottom: 0 
 
 .prove
 	padding: 14px 20px
@@ -118,6 +120,7 @@
 		font-size: 12px    
 .paywith
 	padding: 33px 26px
+	padding: 24px 26px
 	border-top: 1px solid #EBEFF6 
 	label
 		@extend %label
@@ -160,6 +163,8 @@
 		+semi
 		color: #3DB39E
 		text-decoration: none 
+	&.note_error
+		color: #EEA6A6 
 .spendbuy
 	padding: 24px 26px
 	label
@@ -184,7 +189,7 @@
 	.accountinfo__inner
 		width: 630px 
 		margin: 0 auto 
-	.accountinfo__tocomplete
+	.accountinfo__tocomplete,.account__confirm
 		font-size: 17px 
 		color: #55606E
 		margin-bottom: 15px 
@@ -193,6 +198,13 @@
 			+bold
 			font-size: 18px 
 			color: #44AFA1 
+	.account__confirm
+		margin-bottom: 0 
+		strong
+			color: #55606E 
+			+bold
+			span
+				color: #44AFA1 
 	.accountinfo__note
 		background: #F7FBFA
 		border: 2px solid #49AEA1
@@ -245,3 +257,10 @@
 			font-size: 16px 
 			color: #55606E
 			+proxima 
+.supernote
+	border: 1px solid #49AEA1 
+	background: #F7FBFA
+	padding: 12px 15px
+	color: #49AEA1
+	font-size: 12px  
+	margin: 45px 0 30px 0 

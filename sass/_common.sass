@@ -308,6 +308,7 @@ body
 		line-height: 1 
 	.select__value
 		font-size: 17px 
+ 
 	select
 		opacity: 0
 		position: absolute
@@ -359,6 +360,14 @@ body
 			display: inline-block
 			position: relative
 			top: -2px 
+		.select__sum
+			+sbold
+			font-size: 17px 
+			color: #485878
+			position: relative
+			top: -2px 
+			span
+				color: #3DB396 
 	&.is-active
 		.select__drop
 			display: block
@@ -385,6 +394,8 @@ body
 				
 			li:last-child
 				border-bottom: none 
+			.select__value
+				padding-left: 15px 
 .input-date
 	display: inline-block
 	margin-right: 10px 

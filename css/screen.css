@@ -93,6 +93,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select.select_green { border-color: #43b29e; width: auto; display: block; }
 .select .select__subvalue { position: absolute; right: 30px; top: 14px; font-size: 14px; color: #43b29e; line-height: 1; white-space: nowrap; }
 .select .select__subvalue .select__money { margin-left: 55px; font-family: "Source Code Pro", sans-serif; font-weight: 600; font-size: 17px; color: #455473; vertical-align: middle; display: inline-block; position: relative; top: -2px; }
+.select .select__subvalue .select__sum { font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; color: #485878; position: relative; top: -2px; }
+.select .select__subvalue .select__sum span { color: #3db396; }
 .select.is-active .select__drop { display: block; }
 .select .select__drop { position: absolute; top: 50px; left: -2px; width: 100%; border: 2px solid #bccdd5; display: none; background: white; z-index: 1000; border-radius: 3px; }
 .select .select__drop ul { list-style: none; }
@@ -100,6 +102,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select .select__drop ul li .select__subvalue { right: 14px; }
 .select .select__drop ul li img { display: block; }
 .select .select__drop ul li:last-child { border-bottom: none; }
+.select .select__drop ul .select__value { padding-left: 15px; }
 
 .input-date { display: inline-block; margin-right: 10px; vertical-align: top; position: relative; }
 .input-date input { padding: 0 43px 0 7px; height: 26px; padding-top: 3px; border-radius: 3px; font-family: semi, sans-serif; font-weight: normal; font-size: 13px; color: #677689; border: 2px solid #677689; color: #495877; width: 80px; }
@@ -286,6 +289,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .layout .l-col2 .l-col2__inner { padding: 15px; }
 .layout.layout_single .l-col2 { float: none; width: auto; }
 .layout.layout_single .l-col2 .l-col2__inner { padding: 25px; }
+.layout.layout_single .l-col2 .l-col2__inner .table { margin-bottom: 0; }
 
 .prove { padding: 14px 20px; background: white; min-height: 230px; }
 .prove .prove__title { font-family: bold, sans-serif; font-weight: normal; font-size: 19px; margin-bottom: 14px; color: #3db39e; }
@@ -311,7 +315,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .pleasenote { border-top: 1px solid #ebeff6; background: white; padding: 29px 26px; }
 .pleasenote .pleasenote__message { border: 1px solid #49aea1; background: #f7fbfa; padding: 12px 15px; color: #49aea1; font-size: 12px; }
 
-.paywith { padding: 33px 26px; border-top: 1px solid #ebeff6; }
+.paywith { padding: 33px 26px; padding: 24px 26px; border-top: 1px solid #ebeff6; }
 .paywith label { position: relative; }
 .paywith .info { position: absolute; right: 0; top: 6px; cursor: pointer; color: #44afa1; }
 
@@ -323,6 +327,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .note { font-size: 13px; font-family: lite, sans-serif; font-weight: normal; color: #515e78; margin-top: 10px; }
 .note a { font-family: semi, sans-serif; font-weight: normal; color: #3db39e; text-decoration: none; }
+.note.note_error { color: #eea6a6; }
 
 .spendbuy { padding: 24px 26px; }
 .spendbuy input { text-align: right; padding-right: 60px; }
@@ -332,8 +337,11 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .accountinfo { background: white; padding: 23px 0; text-align: center; }
 .accountinfo .accountinfo__inner { width: 630px; margin: 0 auto; }
-.accountinfo .accountinfo__tocomplete { font-size: 17px; color: #55606e; margin-bottom: 15px; font-family: semi, sans-serif; font-weight: normal; }
-.accountinfo .accountinfo__tocomplete strong { font-family: bold, sans-serif; font-weight: normal; font-size: 18px; color: #44afa1; }
+.accountinfo .accountinfo__tocomplete, .accountinfo .account__confirm { font-size: 17px; color: #55606e; margin-bottom: 15px; font-family: semi, sans-serif; font-weight: normal; }
+.accountinfo .accountinfo__tocomplete strong, .accountinfo .account__confirm strong { font-family: bold, sans-serif; font-weight: normal; font-size: 18px; color: #44afa1; }
+.accountinfo .account__confirm { margin-bottom: 0; }
+.accountinfo .account__confirm strong { color: #55606e; font-family: bold, sans-serif; font-weight: normal; }
+.accountinfo .account__confirm strong span { color: #44afa1; }
 .accountinfo .accountinfo__note { background: #f7fbfa; border: 2px solid #49aea1; text-align: center; padding: 16px; color: #49aea1; font-family: semi, sans-serif; font-weight: normal; font-size: 17px; }
 .accountinfo .accountinfo__list { margin: 25px 0; }
 .accountinfo .accountinfo__list dl { margin-bottom: 3px; height: 38px; line-height: 38px; border-radius: 3px; position: relative; text-align: left; border: 2px solid #ebeff6; padding-left: 220px; background: #ebeff6; }
@@ -343,3 +351,5 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .accountinfo .accountinfo__imp { text-align: left; padding: 0 8px; }
 .accountinfo .accountinfo__imp h3 { color: #e54c41; font-family: bold, sans-serif; font-weight: normal; font-size: 18px; }
 .accountinfo .accountinfo__imp p { font-size: 16px; color: #55606e; font-family: proxima, sans-serif; font-weight: normal; }
+
+.supernote { border: 1px solid #49aea1; background: #f7fbfa; padding: 12px 15px; color: #49aea1; font-size: 12px; margin: 45px 0 30px 0; }
