@@ -36,4 +36,12 @@ head.ready(function() {
 	$(".js-genericselect select").change(function(event) {
 		$(this).parents('.select').children('.select__value').text($(this).val());
 	});
+	$('.js-toggledate').change(function(event) {
+		if($(this).val()=='Custom'){
+			$('.input-date').css('display','inline-block');
+		}
+		else{
+			$('.input-date').hide();
+		}
+	});
 });

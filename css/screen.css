@@ -233,7 +233,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .addnew .field input:focus { border-color: #49aea1; }
 .addnew .field .select { width: 266px; float: right; }
 
-.submit, .launch { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; position: relative; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
+.submit, .launch { height: 40px; line-height: 40px; text-decoration: none; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; position: relative; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
 .submit:hover, .launch:hover { background: #358d7d; }
 .submit i, .launch i { margin-right: 10px; font-size: 19px; position: relative; top: 3px; }
 .submit.submit_notlast, .submit_notlast.launch { border-radius: 0; }
