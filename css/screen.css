@@ -223,7 +223,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .addnew { background: #f9fafb; padding: 25px 0; border-bottom: 1px solid #ebeff6; }
 .addnew .addnew__in { border-radius: 3px; box-shadow: inset 0 0 0 2px #ebeff6; background: white; padding-top: 22px; padding-left: 18px; padding-right: 18px; }
-.addnew .submit { margin-left: -18px; margin-right: -18px; }
+.addnew .submit, .addnew .launch { margin-left: -18px; margin-right: -18px; }
 .addnew .field { margin-bottom: 20px; *zoom: 1; }
 .addnew .field:after { content: " "; display: table; clear: both; }
 .addnew .field label { width: 120px; float: left; font-size: 17px; color: #34495e; font-family: semi, sans-serif; font-weight: normal; padding-top: 10px; }
@@ -233,10 +233,11 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .addnew .field input:focus { border-color: #49aea1; }
 .addnew .field .select { width: 266px; float: right; }
 
-.submit { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
-.submit:hover { background: #358d7d; }
-.submit i { margin-right: 10px; font-size: 19px; position: relative; top: 3px; }
-.submit.submit_notlast { border-radius: 0; }
+.submit, .launch { height: 40px; line-height: 40px; display: block; background: #43b29e; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; color: white; text-align: center; cursor: pointer; position: relative; font-family: semi, sans-serif; font-weight: normal; font-size: 16px; }
+.submit:hover, .launch:hover { background: #358d7d; }
+.submit i, .launch i { margin-right: 10px; font-size: 19px; position: relative; top: 3px; }
+.submit.submit_notlast, .submit_notlast.launch { border-radius: 0; }
+.submit .icon-back, .launch .icon-back { position: absolute; left: 10px; }
 
 .amount { border-bottom: 1px solid #ebeff7; background: white; padding: 25px 0; }
 .amount h3 { font-family: semi, sans-serif; font-weight: normal; font-size: 18px; color: #515e78; margin-bottom: 20px; }
@@ -273,9 +274,9 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .actions { *zoom: 1; }
 .actions:after { content: " "; display: table; clear: both; }
-.actions .submit { float: left; width: 50%; }
-.actions .submit:first-child { border-bottom-right-radius: 0; box-shadow: 2px 0 0 white; position: relative; }
-.actions .submit:last-child { border-bottom-left-radius: 0; }
+.actions .submit, .actions .launch { float: left; width: 50%; }
+.actions .submit:first-child, .actions .launch:first-child { border-bottom-right-radius: 0; box-shadow: 2px 0 0 white; position: relative; }
+.actions .submit:last-child, .actions .launch:last-child { border-bottom-left-radius: 0; }
 
 .transinfo { width: 635px; margin: 0 auto; background: white; border: 1px solid #e6eef2; border-radius: 3px; }
 
@@ -286,7 +287,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .layout .l-col1 { float: left; width: 470px; }
 .layout .l-col2 { float: right; width: 382px; background: #bccdd5; }
-.layout .l-col2 .l-col2__inner { padding: 15px; }
+.layout .l-col2 .l-col2__inner { padding: 15px; position: relative; }
 .layout.layout_single .l-col2 { float: none; width: auto; }
 .layout.layout_single .l-col2 .l-col2__inner { padding: 25px; }
 .layout.layout_single .l-col2 .l-col2__inner .table { margin-bottom: 0; }
@@ -319,23 +320,31 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .paywith label { position: relative; }
 .paywith .info { position: absolute; right: 0; top: 6px; cursor: pointer; color: #44afa1; }
 
-.send { padding: 25px; }
+.send { padding: 25px; border-top: 1px solid #ebeff7; }
 .send .field { margin-bottom: 12px; *zoom: 1; }
 .send .field:after { content: " "; display: table; clear: both; }
 .send .field label { float: left; width: 115px; padding-left: 15px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; color: #34495e; padding-top: 8px; }
 .send .field .field__input { float: right; width: 280px; }
+.send .field .field__input .input, .send .field .field__input .userpartner .referral__input, .userpartner .send .field .field__input .referral__input { font-family: lite, sans-serif; font-weight: normal; font-size: 17px; }
+.send .field .field__input .input:-moz-placeholder, .send .field .field__input .userpartner .referral__input:-moz-placeholder, .userpartner .send .field .field__input .referral__input:-moz-placeholder, .send .field .field__input .input::-moz-placeholder, .send .field .field__input .userpartner .referral__input::-moz-placeholder, .userpartner .send .field .field__input .referral__input::-moz-placeholder { color: #cccccc; opacity: 1; }
+.send .field .field__input .input::-webkit-input-placeholder, .send .field .field__input .userpartner .referral__input::-webkit-input-placeholder, .userpartner .send .field .field__input .referral__input::-webkit-input-placeholder { color: #cccccc; }
 
 .qr { padding: 25px 26px; border-top: 1px solid #ebeff6; }
-.qr .qrinput { position: relative; }
-.qr .qrinput input { padding-right: 60px; }
-.qr .qrinput .qrinput__icon { position: absolute; right: 0; top: 0; height: 40px; width: 45px; line-height: 45px; text-align: center; font-size: 24px; color: white; background: #67768a; }
-.qr .qrinput .qrinput__icon i { position: relative; top: 2px; }
+
+.qrinput { position: relative; }
+.qrinput input { padding-right: 60px; color: #cbcbcb; }
+.qrinput input:focus { color: #495877; border-color: #67768a; }
+.qrinput .qrinput__icon { position: absolute; right: 0; top: 0; height: 40px; width: 45px; line-height: 45px; text-align: center; font-size: 24px; color: white; background: #67768a; }
+.qrinput .qrinput__icon i { position: relative; top: 2px; }
+
+.paywith .qrinput { margin-top: 15px; }
 
 .note { font-size: 13px; font-family: lite, sans-serif; font-weight: normal; color: #515e78; margin-top: 10px; }
 .note a { font-family: semi, sans-serif; font-weight: normal; color: #3db39e; text-decoration: none; }
 .note.note_error { color: #eea6a6; }
 
-.spendbuy { padding: 24px 26px; }
+.spendbuy { padding: 24px 26px; *zoom: 1; }
+.spendbuy:after { content: " "; display: table; clear: both; }
 .spendbuy input { text-align: right; padding-right: 60px; }
 .spendbuy .spendbuy__spend, .spendbuy .spendbuy__buy { float: left; margin-bottom: 10px; width: 50%; }
 .spendbuy .notes { clear: both; }
@@ -359,3 +368,25 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .accountinfo .accountinfo__imp p { font-size: 16px; color: #55606e; font-family: proxima, sans-serif; font-weight: normal; }
 
 .supernote { border: 1px solid #49aea1; background: #f7fbfa; padding: 12px 15px; color: #49aea1; font-size: 12px; margin: 45px 0 30px 0; }
+
+.message { text-align: center; background: white; font-size: 17px; color: #455473; padding: 60px 0; }
+
+.pricevalid { position: absolute; bottom: 0; height: 25px; line-height: 25px; text-align: center; left: 0; width: 100%; font-style: italic; font-size: 17px; color: white; }
+.pricevalid span { font-family: "Source Code Pro", sans-serif; font-weight: 600; color: white; font-style: normal; }
+
+.cooldown { position: relative; background: white; height: 16px; border-bottom: 2px solid #70859d; }
+.cooldown .cooldown__time { background: #49aea1; position: absolute; right: 0; width: 30%; height: 16px; }
+.cooldown.is-expired .cooldown__time { display: none; }
+.cooldown.is-expiring .cooldown__time { background: #f1d36b; }
+.cooldown.is-almostexpired .cooldown__time { background: #e06b6c; }
+
+.sendit { padding: 17px 105px; background: white; text-align: center; }
+.sendit .sendit__amount { font-size: 18px; color: #485878; }
+.sendit .sendit__amount strong { font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 27px; margin: 0 5px; }
+.sendit .sendit__amount strong span { color: #44afa1; }
+.sendit .sendit__qr { margin: 20px 0; text-align: center; }
+.sendit .sendit__qrcode { background: #f5fbfa; font-family: "Source Code Pro", sans-serif; font-weight: 600; font-size: 19px; color: #44afa1; padding: 14px 0; text-align: center; }
+
+.launch { background: #6f859f; }
+.launch:hover { background: #586c83; }
+.launch i { font-size: 29px; position: relative; top: 5px; color: #fad575; vertical-align: middle; }

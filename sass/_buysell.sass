@@ -17,6 +17,7 @@
 		background: #BCCDD5 
 		.l-col2__inner
 			padding: 15px 
+			position: relative
 	&.layout_single
 		.l-col2
 			float: none
@@ -133,6 +134,7 @@
 		color: #44AFA1  
 .send
 	padding: 25px 
+	border-top: 1px solid #EBEFF7 
 	h3
 		@extend %label
 	.field
@@ -149,29 +151,40 @@
 		.field__input
 			float: right
 			width: 280px 
+			.input
+				+lite
+				font-size: 17px 
+				+placeholder-color(#ccc)
 .qr
 	padding: 25px 26px 
 	border-top: 1px solid #EBEFF6 
 	label
 		@extend %label
-	.qrinput
-		position: relative
-		input
-			padding-right: 60px 
-		.qrinput__icon
-			position: absolute
-			right: 0
-			top: 0
-			height: 40px   
-			width: 45px 
-			line-height: 45px 
-			text-align: center
-			font-size: 24px 
-			color: #fff
-			background: #67768A  
-			i
-				position: relative
-				top: 2px 
+.qrinput
+	position: relative
+	input
+		padding-right: 60px 
+		color: #CBCBCB
+		&:focus
+			color: #495877 	
+			border-color: #67768A 		
+	.qrinput__icon
+		position: absolute
+		right: 0
+		top: 0
+		height: 40px   
+		width: 45px 
+		line-height: 45px 
+		text-align: center
+		font-size: 24px 
+		color: #fff
+		background: #67768A
+		c  
+		i
+			position: relative
+			top: 2px 
+.paywith .qrinput
+	margin-top: 15px 
 .note
 	font-size: 13px 
 	+lite
@@ -185,6 +198,7 @@
 		color: #EEA6A6 
 .spendbuy
 	padding: 24px 26px
+	+clr
 	label
 		@extend %label
 	input
@@ -282,3 +296,81 @@
 	color: #49AEA1
 	font-size: 12px  
 	margin: 45px 0 30px 0 
+.message
+	text-align: center
+	background: #fff
+	font-size: 17px  
+	color: #455473
+	padding: 60px 0 
+.pricevalid
+	position: absolute
+	bottom: 0
+	height: 25px   
+	line-height: 25px
+	text-align: center
+	left: 0
+	width: 100%
+	font-style: italic
+	font-size: 17px  
+	color: #fff   
+	span
+		+ssemi
+		color: #fff 
+		font-style: normal 
+
+.cooldown
+	position: relative
+	background: #fff 
+	height: 16px
+	border-bottom: 2px solid #70859D  
+	.cooldown__time
+		background: #49AEA1 
+		position: absolute
+		right: 0
+		width: 30%
+		height: 16px    
+	&.is-expired
+		.cooldown__time
+			display: none
+	&.is-expiring
+		.cooldown__time
+			background: #F1D36B
+	&.is-almostexpired
+		.cooldown__time
+			background: #E06B6C 
+.sendit
+	padding: 17px 105px
+	background: #fff  
+	text-align: center
+	.sendit__amount
+		font-size: 18px 
+		color: #485878
+		strong
+			+sbold
+			font-size: 27px 
+			margin: 0 5px 
+			span
+				color: #44AFA1 
+	.sendit__qr
+		margin: 20px 0
+		text-align: center 
+	.sendit__qrcode
+		background: #F5FBFA
+		+ssemi
+		font-size: 19px 
+		color: #44AFA1
+		padding: 14px 0
+		text-align: center
+		  
+.launch
+	@extend .submit	
+	background: #6F859F
+	&:hover
+		background: darken(#6F859F , 10%)
+	i
+		font-size: 29px 
+		position: relative
+		top: 5px 
+		color: #FAD575 
+		vertical-align: middle
+		
