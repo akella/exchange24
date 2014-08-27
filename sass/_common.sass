@@ -105,6 +105,22 @@ body
 	text-align: center
 	&:hover
 		background: darken(#43B29E , 10%)
+.bluebtn
+	background: #677689 
+	border-radius: 3px
+	height: 40px 
+	line-height: 40px
+	white-space: nowrap
+	padding: 0 24px  
+	font-size: 17px 
+	+semi
+	cursor: pointer
+	color: #fff 
+	text-decoration: none
+	display: inline-block
+	text-align: center
+	&:hover
+		background: darken(#677689 , 10%)
 .header
 	border-bottom: 2px solid #485878 
 	height: 58px 
@@ -115,6 +131,7 @@ body
 		float: left
 		+semi
 		font-size: 21px 
+		color: #495877 
 	.header__add
 		float: right
 		background: #44AFA1
@@ -143,6 +160,8 @@ body
 			+bold
 			color: #3DB39E
 			margin-left: 5px 
+		&.header__right_closer
+			margin-right: 10px 
 .table
 	border-spacing: 0
 	border-collapse: collapse

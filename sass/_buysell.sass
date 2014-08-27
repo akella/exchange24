@@ -17,6 +17,12 @@
 		background: #BCCDD5 
 		.l-col2__inner
 			padding: 15px 
+	&.layout_single
+		.l-col2
+			float: none
+			width: auto
+			.l-col2__inner
+				padding: 25px 
 
 .prove
 	padding: 14px 20px
@@ -169,3 +175,73 @@
 		clear: both
 	input,.amountinput__currency
 		border-radius: 0
+
+
+.accountinfo
+	background: #fff 
+	padding: 23px 0 
+	text-align: center
+	.accountinfo__inner
+		width: 630px 
+		margin: 0 auto 
+	.accountinfo__tocomplete
+		font-size: 17px 
+		color: #55606E
+		margin-bottom: 15px 
+		+semi
+		strong
+			+bold
+			font-size: 18px 
+			color: #44AFA1 
+	.accountinfo__note
+		background: #F7FBFA
+		border: 2px solid #49AEA1
+		text-align: center
+		padding: 16px
+		color: #49AEA1
+		+semi
+		font-size: 17px   
+	.accountinfo__list
+		margin: 25px 0
+		dl
+			margin-bottom: 3px 
+			height: 38px 
+			line-height: 38px
+			border-radius: 3px
+			position: relative
+			text-align: left
+			border: 2px solid #EBEFF6 
+			padding-left: 200px + 20px
+			background: #EBEFF6 
+			dt
+				position: absolute
+				left: 0
+				top: 0
+				height: 38px  
+				line-height: 38px 
+				font-size: 17px 
+				+lite
+				color: #55606E 
+				width: 200px - 20px
+				padding-left: 19px
+				background: #fff 
+			&.is-important
+				dt
+					+bold
+					color: #E54C41 
+			dd
+				color: #55606E
+				+bold
+				font-size: 19px  
+
+	.accountinfo__imp
+		text-align: left
+		padding: 0 8px 
+		h3
+			color: #E54C41 
+			+bold
+			font-size: 18px 
+		p
+			font-size: 16px 
+			color: #55606E
+			+proxima 

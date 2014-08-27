@@ -33,13 +33,17 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .btn { background: #43b29e; border-radius: 3px; min-width: 105px; height: 33px; line-height: 33px; white-space: nowrap; padding: 0 10px; font-size: 14px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
 .btn:hover { background: #358d7d; }
 
+.bluebtn { background: #677689; border-radius: 3px; height: 40px; line-height: 40px; white-space: nowrap; padding: 0 24px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
+.bluebtn:hover { background: #515d6c; }
+
 .header { border-bottom: 2px solid #485878; height: 58px; line-height: 58px; padding-left: 25px; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
-.header h2 { float: left; font-family: semi, sans-serif; font-weight: normal; font-size: 21px; }
+.header h2 { float: left; font-family: semi, sans-serif; font-weight: normal; font-size: 21px; color: #495877; }
 .header .header__add { float: right; background: #44afa1; height: 40px; line-height: 40px; border-radius: 3px; font-size: 17px; color: white; padding: 0 13px; margin: 9px 9px 0 0; cursor: pointer; }
 .header .header__add i { display: inline-block; vertical-align: middle; position: relative; top: 2px; font-size: 14px; margin-right: 8px; }
 .header .header__right { float: right; text-align: right; font-size: 21px; color: #485878; margin-right: 25px; }
 .header .header__right strong { font-family: bold, sans-serif; font-weight: normal; color: #3db39e; margin-left: 5px; }
+.header .header__right.header__right_closer { margin-right: 10px; }
 
 .table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 .table th, .table td { font-weight: normal; border-bottom: 1px solid #ebeff6; padding: 17px 14px; text-align: left; font-size: 18px; color: #455473; }
@@ -280,6 +284,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .layout .l-col1 { float: left; width: 470px; }
 .layout .l-col2 { float: right; width: 382px; background: #bccdd5; }
 .layout .l-col2 .l-col2__inner { padding: 15px; }
+.layout.layout_single .l-col2 { float: none; width: auto; }
+.layout.layout_single .l-col2 .l-col2__inner { padding: 25px; }
 
 .prove { padding: 14px 20px; background: white; min-height: 230px; }
 .prove .prove__title { font-family: bold, sans-serif; font-weight: normal; font-size: 19px; margin-bottom: 14px; color: #3db39e; }
@@ -323,3 +329,17 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .spendbuy .spendbuy__spend, .spendbuy .spendbuy__buy { float: left; margin-bottom: 10px; width: 50%; }
 .spendbuy .notes { clear: both; }
 .spendbuy input, .spendbuy .amountinput__currency { border-radius: 0; }
+
+.accountinfo { background: white; padding: 23px 0; text-align: center; }
+.accountinfo .accountinfo__inner { width: 630px; margin: 0 auto; }
+.accountinfo .accountinfo__tocomplete { font-size: 17px; color: #55606e; margin-bottom: 15px; font-family: semi, sans-serif; font-weight: normal; }
+.accountinfo .accountinfo__tocomplete strong { font-family: bold, sans-serif; font-weight: normal; font-size: 18px; color: #44afa1; }
+.accountinfo .accountinfo__note { background: #f7fbfa; border: 2px solid #49aea1; text-align: center; padding: 16px; color: #49aea1; font-family: semi, sans-serif; font-weight: normal; font-size: 17px; }
+.accountinfo .accountinfo__list { margin: 25px 0; }
+.accountinfo .accountinfo__list dl { margin-bottom: 3px; height: 38px; line-height: 38px; border-radius: 3px; position: relative; text-align: left; border: 2px solid #ebeff6; padding-left: 220px; background: #ebeff6; }
+.accountinfo .accountinfo__list dl dt { position: absolute; left: 0; top: 0; height: 38px; line-height: 38px; font-size: 17px; font-family: lite, sans-serif; font-weight: normal; color: #55606e; width: 180px; padding-left: 19px; background: white; }
+.accountinfo .accountinfo__list dl.is-important dt { font-family: bold, sans-serif; font-weight: normal; color: #e54c41; }
+.accountinfo .accountinfo__list dl dd { color: #55606e; font-family: bold, sans-serif; font-weight: normal; font-size: 19px; }
+.accountinfo .accountinfo__imp { text-align: left; padding: 0 8px; }
+.accountinfo .accountinfo__imp h3 { color: #e54c41; font-family: bold, sans-serif; font-weight: normal; font-size: 18px; }
+.accountinfo .accountinfo__imp p { font-size: 16px; color: #55606e; font-family: proxima, sans-serif; font-weight: normal; }
