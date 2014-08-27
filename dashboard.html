@@ -160,7 +160,7 @@
 			</div>
 			<table class="table">
 				<tr>
-					<td class="table__info"><i class="icon-info"></i></td>
+					<td class="table__info js-togglerow"><i class="icon-info"></i></td>
 					<td class="table__date"><span>apr</span>28</td>
 					<td class="table__time">07:45</td>
 					<td>Buy</td>
@@ -168,7 +168,7 @@
 					<td class="table__status is-pending">Pending</td>
 					<td class="table__remove"><i class="icon-delete"></i></td>
 				</tr>
-				<tr>
+				<tr js-togglerow hidden>
 					<td colspan="7" class="table__more">
 						<div class="transinfo">
 							<table class="table table_small">
@@ -195,7 +195,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="table__info"><i class="icon-info"></i></td>
+					<td class="table__info js-togglerow"><i class="icon-info"></i></td>
 					<td class="table__date"><span>apr</span>28</td>
 					<td class="table__time">07:45</td>
 					<td>Deposit</td>
@@ -203,8 +203,34 @@
 					<td class="table__status is-pending">Pending</td>
 					<td class="table__remove"><i class="icon-delete"></i></td>
 				</tr>
+				<tr hidden>
+					<td colspan="7" class="table__more">
+						<div class="transinfo">
+							<table class="table table_small">
+								<tr>
+									<td>Bitcoin price</td>
+									<td class="table__amount">4124.21 <span class="table__currency">USD</span></td>
+								</tr>
+								<tr>
+									<td>Amount</td>
+									<td class="table__amount">4124.21 <span class="table__currency">USD</span></td>
+								</tr>
+								<tr>
+									<td>Wallet address</td>
+									<td class="table__right">123asdasdqe123123</td>
+								</tr>
+								<tr class="table__footer">
+									<td>
+										Total Paid
+									</td>
+									<td class="table__amount">4124.21 <span class="table__currency">USD</span></td>
+								</tr>
+							</table>
+						</div>
+					</td>
+				</tr>
 				<tr>
-					<td class="table__info"><i class="icon-info"></i></td>
+					<td class="table__info js-togglerow"><i class="icon-info"></i></td>
 					<td class="table__date"><span>apr</span>28</td>
 					<td class="table__time">07:45</td>
 					<td>Deposit</td>
@@ -212,7 +238,7 @@
 					<td class="table__status is-pending">Pending</td>
 					<td class="table__remove"><i class="icon-delete"></i></td>
 				</tr>
-				<tr>
+				<tr hidden>
 					<td colspan="7" class="table__more">
 						<div class="transinfo">
 							<table class="table table_small">
@@ -233,13 +259,39 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="table__info"><i class="icon-info"></i></td>
+					<td class="table__info js-togglerow"><i class="icon-info"></i></td>
 					<td class="table__date"><span>apr</span>28</td>
 					<td class="table__time">07:45</td>
 					<td>Deposit</td>
 					<td class="table__amount">25.121313<span class="table__currency">BTC</span></td>
 					<td class="table__status is-ok">Complete</td>
 					<td></td>
+				</tr>
+				<tr hidden>
+					<td colspan="7" class="table__more">
+						<div class="transinfo">
+							<table class="table table_small">
+								<tr>
+									<td>Bitcoin price</td>
+									<td class="table__amount">4124.21 <span class="table__currency">USD</span></td>
+								</tr>
+								<tr>
+									<td>Amount</td>
+									<td class="table__amount">4124.21 <span class="table__currency">USD</span></td>
+								</tr>
+								<tr>
+									<td>Wallet address</td>
+									<td class="table__right">123asdasdqe123123</td>
+								</tr>
+								<tr class="table__footer">
+									<td>
+										Total Paid
+									</td>
+									<td class="table__amount">4124.21 <span class="table__currency">USD</span></td>
+								</tr>
+							</table>
+						</div>
+					</td>
 				</tr>
 			</table>
 		</div>

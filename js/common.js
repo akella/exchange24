@@ -44,4 +44,7 @@ head.ready(function() {
 			$('.input-date').hide();
 		}
 	});
+	$('.js-togglerow').click(function(event) {
+		$(this).parent().next().toggle();
+	});
 });
