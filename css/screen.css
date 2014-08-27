@@ -282,7 +282,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .b_white { background: white; *zoom: 1; }
 .b_white:after { content: " "; display: table; clear: both; }
 
-.paywith label, .qr label, .spendbuy label { display: block; font-size: 19px; color: #3db39e; margin-bottom: 14px; font-family: bold, sans-serif; font-weight: normal; }
+.paywith label, .send h3, .qr label, .spendbuy label { display: block; font-size: 19px; color: #3db39e; margin-bottom: 14px; font-family: bold, sans-serif; font-weight: normal; }
 
 .layout .l-col1 { float: left; width: 470px; }
 .layout .l-col2 { float: right; width: 382px; background: #bccdd5; }
@@ -318,6 +318,12 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .paywith { padding: 33px 26px; padding: 24px 26px; border-top: 1px solid #ebeff6; }
 .paywith label { position: relative; }
 .paywith .info { position: absolute; right: 0; top: 6px; cursor: pointer; color: #44afa1; }
+
+.send { padding: 25px; }
+.send .field { margin-bottom: 12px; *zoom: 1; }
+.send .field:after { content: " "; display: table; clear: both; }
+.send .field label { float: left; width: 115px; padding-left: 15px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; color: #34495e; padding-top: 8px; }
+.send .field .field__input { float: right; width: 280px; }
 
 .qr { padding: 25px 26px; border-top: 1px solid #ebeff6; }
 .qr .qrinput { position: relative; }
