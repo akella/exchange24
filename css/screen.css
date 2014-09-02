@@ -33,8 +33,13 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .btn { background: #43b29e; border-radius: 3px; min-width: 105px; height: 33px; line-height: 33px; white-space: nowrap; padding: 0 10px; font-size: 14px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
 .btn:hover { background: #358d7d; }
 
-.bluebtn { background: #677689; border-radius: 3px; height: 40px; line-height: 40px; white-space: nowrap; padding: 0 24px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
-.bluebtn:hover { background: #515d6c; }
+.bluebtn, .redbtn { background: #677689; border-radius: 3px; height: 40px; line-height: 40px; white-space: nowrap; padding: 0 24px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
+.bluebtn i, .redbtn i { vertical-align: middle; margin-right: 10px; position: relative; top: 2px; }
+.bluebtn:hover, .redbtn:hover { background: #515d6c; }
+
+.redbtn { background: #eca6a7; padding: 0; min-width: 45px; }
+.redbtn i { color: white; text-align: center; padding: 0; margin: 0; font-size: 22px; top: 4px; }
+.redbtn:hover { background: #e37c7d; }
 
 .header { border-bottom: 2px solid #485878; height: 58px; line-height: 58px; padding-left: 25px; *zoom: 1; }
 .header:after { content: " "; display: table; clear: both; }
@@ -46,11 +51,13 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .header .header__right.header__right_closer { margin-right: 10px; }
 
 .table { border-spacing: 0; border-collapse: collapse; width: 100%; }
+.table thead th { font-size: 17px; color: #455473; font-family: bold, sans-serif; font-weight: normal; text-align: left; }
 .table th, .table td { font-weight: normal; border-bottom: 1px solid #ebeff6; padding: 17px 14px; text-align: left; font-size: 18px; color: #455473; }
 .table tr:last-child td, .table tr:last-child th { border-bottom: none; }
 .table .table__edit, .table .table__info, .table .table__remove { background: #70859d; width: 38px; padding: 0; text-align: center; color: white; cursor: pointer; }
 .table .table__edit:hover, .table .table__info:hover, .table .table__remove:hover { background: #596c81; background: white; box-shadow: inset 0 0 0 2px #70859d; color: #70859d; }
 .table .table__edit i, .table .table__info i, .table .table__remove i { position: relative; top: 3px; }
+.table .table__info_alt { box-shadow: none; background: white; color: #70859d; }
 .table .table__remove { background: #ecaaab; font-size: 23px; }
 .table .table__remove:hover { background: #e06b6c; background: white; box-shadow: inset 0 0 0 2px #e06b6c; color: #e06b6c; }
 .table .table__remove i { top: 5px; }
@@ -58,6 +65,9 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__currency { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; margin-left: 10px; }
 .table .table__font { font-family: "Source Code Pro", sans-serif; font-weight: 400; }
 .table .table__amount { text-align: right; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
+.table .table__amount.table__amount_normal { font-family: "Source Code Pro", sans-serif; font-weight: 400; text-align: left; padding-right: 30px; width: 100px; }
+.table .table__amount.table__amount_normal.is-red { color: #be3931; }
+.table .table__amount.table__amount_normal.is-green { color: #43b29e; }
 .table .table__status { font-style: italic; color: #49aea1; font-size: 18px; padding-left: 30px; padding-right: 30px; }
 .table .table__status.is-pending { color: #f1d36b; }
 .table .table__date { padding-left: 25px; padding-right: 20px; padding-top: 0; padding-bottom: 0; font-size: 30px; text-align: left; line-height: 0.8; text-transform: uppercase; width: 44px; vertical-align: middle; font-family: "Source Code Pro", sans-serif; font-weight: 300; }
@@ -65,6 +75,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__time { padding-left: 0; font-family: "Source Code Pro", sans-serif; font-weight: 400; }
 .table .table__more { padding: 10px 0; background: #f9fafb; }
 .table .table__right { text-align: right; }
+.table .table__right b { font-family: semi, sans-serif; font-weight: normal; }
 .table .table__footer td { background: #ebeff6; border-top: 2px solid #bcccd5; font-family: semi, sans-serif; font-weight: normal; }
 .table .table__footer .table__amount { font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table.table_small td { font-size: 15px !important; padding: 14px 20px; }
@@ -166,6 +177,12 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .icon-qr:before { content: "y"; }
 
 .icon-phone:before { content: "z"; }
+
+.icon-wallet:before { content: "A"; }
+
+.icon-send:before { content: "B"; }
+
+.icon-user:before { content: "C"; }
 
 .l-sidenav { position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; background: #445572; width: 80px; overflow: hidden; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .is-sidenav .l-sidenav { width: 225px; }
@@ -345,6 +362,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .spendbuy { padding: 24px 26px; *zoom: 1; }
 .spendbuy:after { content: " "; display: table; clear: both; }
+.spendbuy.spendbuy_small { padding: 0; height: 45px; overflow: hidden; }
 .spendbuy input { text-align: right; padding-right: 60px; }
 .spendbuy .spendbuy__spend, .spendbuy .spendbuy__buy { float: left; margin-bottom: 10px; width: 50%; }
 .spendbuy .notes { clear: both; }
@@ -390,3 +408,41 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .launch { background: #6f859f; }
 .launch:hover { background: #586c83; }
 .launch i { font-size: 29px; position: relative; top: 5px; color: #fad575; vertical-align: middle; }
+
+.wallet .wallet__actions { background: #f9fafb; padding: 20px 103px; border-top: 1px solid #ebeff6; }
+.wallet .wallet__action { border: 2px solid #bccdd5; border-radius: 3px; background: white; }
+.wallet .wallet__action .submit, .wallet .wallet__action .launch { margin: 0 -2px -2px -2px; }
+.wallet .wallet__action.wallet__action_qr .wallet__actioninner { padding-bottom: 20px; *zoom: 1; }
+.wallet .wallet__action.wallet__action_qr .wallet__actioninner:after { content: " "; display: table; clear: both; }
+.wallet .wallet__actioninner { padding: 20px 30px 1px 20px; }
+.wallet .wallet__field { margin-bottom: 20px; *zoom: 1; }
+.wallet .wallet__field:after { content: " "; display: table; clear: both; }
+.wallet .wallet__field label { float: left; text-align: right; width: 96px; font-size: 17px; color: #34495e; font-family: semi, sans-serif; font-weight: normal; height: 45px; line-height: 45px; }
+.wallet .wallet__field .wallet__input { float: right; width: 476px; }
+.wallet .wallet__header { height: 80px; position: relative; }
+.wallet .wallet__title { float: left; width: 355px; padding-left: 25px; height: 80px; line-height: 80px; }
+.wallet .wallet__title .wallet__titledit { width: 100px; display: inline-block; margin-right: 6px; }
+.wallet .wallet__title .bluebtn, .wallet .wallet__title .redbtn, .wallet .wallet__title .redbtn { margin-right: 6px; }
+.wallet .wallet__title strong { font-size: 20px; font-weight: normal; font-family: bold, sans-serif; font-weight: normal; color: #394660; }
+.wallet .wallet__title i.icon-edit { cursor: pointer; font-size: 18px; margin-right: 20px; vertical-align: middle; display: inline-block; }
+.wallet .wallet__title .wallet__status { display: inline-block; border: 2px solid #43b29e; border-radius: 3px; vertical-align: middle; margin-left: 15px; font-family: bold, sans-serif; font-weight: normal; font-size: 13px; height: 20px; line-height: 20px; padding: 0 9px; color: #43b29e; position: relative; top: -3px; }
+.wallet .wallet__balance { float: right; font-size: 24px; font-family: "Source Code Pro", sans-serif; font-weight: 700; color: #34495e; padding-top: 12px; }
+.wallet .wallet__balance span { color: #43b29e; }
+.wallet .wallet__balance .wallet__sum { display: block; line-height: 1; margin-bottom: 6px; }
+.wallet .wallet__balance .wallet__sum.is-inactive { font-family: "Source Code Pro", sans-serif; font-weight: 400; color: #979ea7; }
+.wallet .wallet__balance .wallet__sum.is-inactive span { color: #979ea7; }
+.wallet .wallet__tabs { float: right; height: 81px; width: 242px; margin-left: 27px; }
+.wallet .wallet__tabs a { float: right; width: 50%; text-align: center; border-left: 1px solid #ebeff6; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 81px; line-height: 81px; text-decoration: none; font-size: 14px; font-family: semi, sans-serif; font-weight: normal; color: #485878; }
+.wallet .wallet__tabs a i { vertical-align: middle; margin-right: 14px; text-align: center; }
+.wallet .wallet__tabs a.is-big { float: none; width: auto; display: block; }
+.wallet .wallet__tabs a.is-active, .wallet .wallet__tabs a:hover { background: #f9fafb; box-shadow: inset 0 6px 0 #43b29e; }
+.wallet .wallet__qr { float: left; margin-right: 20px; }
+.wallet .wallet__qrcontent { overflow: hidden; }
+.wallet .wallet__qrcontent h3 { font-family: semi, sans-serif; font-weight: normal; font-size: 21px; color: #485878; padding-top: 12px; margin-bottom: 22px; }
+.wallet .wallet__qrcontent .wallet__qraddress { margin-bottom: 20px; }
+.wallet .wallet__qrcontent .wallet__qraddress input { background: #f7fbfa; color: #43b29e; text-align: center; }
+.wallet .wallet__qrcontent .share .share__service { float: right; background: #70859d; width: 45px; height: 45px; line-height: 45px; border-radius: 3px; margin-left: 2px; text-align: center; cursor: pointer; }
+.wallet .wallet__qrcontent .share .share__service:hover { background: #596c81; }
+.wallet .wallet__qrcontent .share .share__service i { color: white; font-size: 23px; position: relative; top: 4px; }
+.wallet .wallet__qrcontent .share .share__link { text-align: center; background: #70859d; cursor: pointer; height: 45px; line-height: 45px; border-radius: 3px; overflow: hidden; font-size: 15px; color: white; font-family: semi, sans-serif; font-weight: normal; text-decoration: none; display: block; }
+.wallet .wallet__qrcontent .share .share__link:hover { background: #596c81; }

@@ -119,8 +119,27 @@ body
 	text-decoration: none
 	display: inline-block
 	text-align: center
+	i
+		vertical-align: middle
+		margin-right: 10px 
+		position: relative
+		top: 2px 
 	&:hover
 		background: darken(#677689 , 10%)
+.redbtn
+	@extend .bluebtn
+	background: #ECA6A7
+	padding: 0
+	min-width: 45px  
+	i
+		color: #fff
+		text-align: center
+		padding: 0
+		margin: 0  
+		font-size: 22px  
+		top: 4px 
+	&:hover
+		background: darken(#ECA6A7 , 10%)
 .header
 	border-bottom: 2px solid #485878 
 	height: 58px 
@@ -166,6 +185,12 @@ body
 	border-spacing: 0
 	border-collapse: collapse
 	width: 100%
+	thead
+		th
+			font-size: 17px 
+			color: #455473 
+			+bold
+			text-align: left
 	th,td
 		font-weight: normal
 		border-bottom: 1px solid #EBEFF6 
@@ -192,6 +217,10 @@ body
 		i
 			position: relative
 			top: 3px 
+	.table__info_alt
+		box-shadow: none
+		background: #fff 
+		color: #70859D 
 	.table__remove
 		background: #ECAAAB 
 		font-size: 23px 
@@ -214,6 +243,16 @@ body
 	.table__amount
 		text-align: right
 		+sbold
+		&.table__amount_normal
+			+snormal
+			text-align: left
+			padding-right: 30px 
+			width: 100px 
+			&.is-red
+				color: #BE3931
+			&.is-green
+				color: #43B29E 
+				
 	.table__status
 		font-style: italic 
 		color: #49AEA1
@@ -246,6 +285,8 @@ body
 		background: #F9FAFB  
 	.table__right
 		text-align: right
+		b
+			+semi
 	.table__footer
 		td
 			background: #EBEFF6
