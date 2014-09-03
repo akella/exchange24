@@ -103,6 +103,11 @@ body
 	text-decoration: none
 	display: inline-block
 	text-align: center
+	i
+		margin-right: 10px 
+		vertical-align: middle
+		position: relative
+		top: 1px 
 	&:hover
 		background: darken(#43B29E , 10%)
 .bluebtn
@@ -217,10 +222,7 @@ body
 		i
 			position: relative
 			top: 3px 
-	.table__info_alt
-		box-shadow: none
-		background: #fff 
-		color: #70859D 
+
 	.table__remove
 		background: #ECAAAB 
 		font-size: 23px 
@@ -231,6 +233,16 @@ body
 			color: #E06B6C 
 		i
 			top: 5px 
+	.table__info_alt,.table__remove_alt,.table__edit_alt
+		box-shadow: none
+		background: #fff 
+		color: #70859D 
+	.table__edit_alt
+		color: #5C6986 
+		padding: 0 10px 
+	.table__remove_alt
+		color: #E26A6A 
+		padding: 0 10px 
 	.table__green
 		color: #44AFA1 
 		+sbold
@@ -240,6 +252,8 @@ body
 		margin-left: 10px 
 	.table__font
 		+snormal
+	.table__lite
+		+lite
 	.table__invoice
 		a
 			display: inline-block
@@ -355,8 +369,8 @@ body
 	display: inline-block
 	border-radius: 3px
 	padding: 0px 16px 	
-	height: 41px 
-	line-height: 41px 
+	height: 40px 
+	line-height: 40px 
 	i
 		position: absolute
 		right: 15px
@@ -424,6 +438,9 @@ body
 			top: -2px 
 			span
 				color: #3DB396 
+	&.select_gray
+		border: none
+		background: #EBEFF6  
 	&.is-active
 		.select__drop
 			display: block

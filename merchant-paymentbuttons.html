@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="initial-scale=1"/>
+	<!-- <meta name="viewport" content="width=1200"> -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+</head>
+<body class="is-notsidenav">
+<!-- begin l-sidenav  -->
+<div class="l-sidenav">
+	<!-- begin sidenav  -->
+	<div class="sidenav">
+		<div class="sidenav__toggle icon-togglemenu js-menu"></div>
+		<a href='#' class="sidenav__logo"></a>
+		<ul class="nav">
+			<li><a class="is-active" href="#"><i class="icon-i-dashboard"></i><span>Dashboard</span></a></li>
+			<li><a href="#"><i class="icon-user"></i><span>Profile</span></a></li>
+			<li><a href="#"><i class="icon-payment"></i><span>Payment Button</span></a></li>
+			<li><a href="#"><i class="icon-paymentscreen"></i><span>Payment Screen</span></a></li>
+			<li><a href="#"><i class="icon-cli"></i><span>Integration Tools</span></a></li>
+		</ul>
+	</div>
+	<!-- end sidenav -->
+</div>
+<!-- end l-sidenav -->
+<!-- begin l-content  -->
+<div class="l-content">
+	<!-- begin top  -->
+	<div class="top">
+		<!-- begin top__current  -->
+		<div class="top__current">
+			BUY PRICE <strong class="top__buyprice">$ 593.30</strong>
+			<div class="top__select">
+				<span class="top__selectvalue">USD</span><i class="icon-arrow"></i>
+				<div class="top__selectdrop">
+					<ul>
+						<li><a href="#">EUR</a></li>
+						<li><a href="#">USD</a></li>
+						<li><a href="#">GBP</a></li>
+						<li><a href="#">RUR</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end top__current -->
+		<!-- begin top__right  -->
+		<div class="top__right">
+			<ul class="usernav">
+				<li><a href="#" class="is-active">account</a></li>
+				<li><a href="#">e24 wallet</a></li>
+				<li><a href="#">buy & sell</a></li>
+				<li><a href="#">e24 pay</a></li>
+			</ul>
+			<div class="user">
+				<div class="user__name">sean.j.yao@gmail.com<i class="icon-arrow"></i></div>
+				<div class="user__drop">
+					<ul>
+						<li><a href="#"><i class="icon-settings"></i>Settings</a></li>
+						<li><a href="#"><i class="icon-help"></i>Help</a></li>
+						<li class="user__logout"><a href="#"><i class="icon-logout"></i>Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end top__right -->
+	</div>
+	<!-- end top -->
+	<!-- begin exchange  -->
+	<div class="exchange">
+		<div class="exchange__from">
+			<div class="exchange__value">236.27<div class="exchange__currency">BTC</div></div>
+		</div>
+		<div class="exchange__to">
+			<div class="exchange__value">12236.27<div class="exchange__currency">USD</div></div>
+		</div>
+	</div>
+	<!-- end exchange -->
+
+	<div class="l-center">
+		
+
+		<!-- begin b  -->
+		<div class="b">
+			<div class="header">
+				<h2>Your Payment Buttons</h2>
+				<div class="header__right header__right_closer">
+					<div class="btn"><i class="icon-add"></i>New Payment Button</div>
+				</div>
+			</div>
+			<!-- begin addb  -->
+			<div class="addb">
+				<div class="addb__inner">
+					<div class="addb__choosebutton">
+						<label class="addb__buttonb">
+							<input type="radio" name="aa" id="">
+							<div class="addb__inputradio"></div>
+							<div class="addb__button"><i class="icon-btc1"></i>Pay with Bitcoin</div>
+						</label>
+						<label class="addb__buttonb">
+							<input type="radio" name="aa" id="">
+							<div class="addb__inputradio"></div>
+							<div class="addb__button"><i class="icon-btc1"></i>Donate Bitcoin</div>
+						</label>
+					</div>
+					<!-- begin inner content -->
+					<div class="addb__innercontent">
+						<div class="addb__field">
+							<label for="">Item name</label>
+							<div class="addb__input">
+								<input type="text" placeholder="placeholder text" class="input">
+							</div>
+						</div>
+						<div class="addb__field">
+							<label for="">Description</label>
+							<div class="addb__input">
+								<input type="text" placeholder="placeholder text" class="input">
+							</div>
+						</div>
+						<div class="addb__field">
+							<label for="">Price</label>
+							<div class="addb__input">
+								<input type="text" placeholder="placeholder text" class="input input_short">
+								<div class="select select_gray js-genericselect">
+									<i class="icon-arrow"></i>
+									<select name="" id=""><option value="ISD">USD</option><option value="BTC">BTC</option></select>
+									<div class="select__value">USD<i></i></div>
+								</div>
+							</div>
+						</div>
+						<div class="addb__advanced">Advanced Settings<i class="icon-arrow"></i></div>
+						<div class="addb__field">
+							<label for="">Reference ID</label>
+							<div class="addb__input">
+								<input type="text" placeholder="placeholder text" class="input">
+							</div>
+						</div>
+						<div class="addb__field">
+							<label for="">Callback URL</label>
+							<div class="addb__input">
+								<input type="text" placeholder="placeholder text" class="input">
+							</div>
+						</div>
+						<div class="hr"></div>
+						<div class="addb__field">
+							<label for="">Embed Code</label>
+							<div class="addb__input">
+								<textarea name="" class="input" id="" cols="30" rows="5">&#x3C;div class=&#x22;addb__field&#x22;&#x3E;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;label for=&#x22;&#x22;&#x3E;Preview&#x3C;/label&#x3E;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;addb__input&#x22;&#x3E;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;div class=&#x22;addb__button&#x22;&#x3E;&#x3C;i class=&#x22;icon-btc&#x22;&#x3E;&#x3C;/i&#x3E;Donate Bitcoin&#x3C;/div&#x3E;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x3C;/div&#x3E;</textarea>
+							</div>
+						</div>
+						<div class="addb__field">
+							<label for="">Preview</label>
+							<div class="addb__input">
+								<div class="addb__button"><i class="icon-btc1"></i>Donate Bitcoin</div>
+							</div>
+						</div>
+					</div>
+					<!-- end inner content -->
+					<div class="submit">Generate Button</div>
+				</div>
+			</div>
+			<!-- end addb -->
+			
+			
+			<table class="table">
+				<tr>
+					<td class="table__edit table__edit_alt js-togglerow"><i class="icon-edit"></i></td>
+					<td class="table__lite">Weekend conference ticket</td>
+					<td class="table__amount">25.121313<span class="table__currency">BTC</span></td>
+					<td class="table__lite">Weekend1</td>
+					<td class="table__remove table__remove_alt"><i class="icon-delete"></i></td>
+				</tr>
+				<tr>
+					<td class="table__edit table__edit_alt js-togglerow"><i class="icon-edit"></i></td>
+					<td class="table__lite">Weekend conference ticket</td>
+					<td class="table__amount">25.121313<span class="table__currency">BTC</span></td>
+					<td class="table__lite">Lorem ipsum dolor  </td>
+					<td class="table__remove table__remove_alt"><i class="icon-delete"></i></td>
+				</tr>
+				
+			</table>
+		</div>
+		<!-- end b -->
+
+		
+
+	</div>
+</div>
+<!-- end l-content -->
+<!-- load scripts -->
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+</body>
+</html>

@@ -31,6 +31,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .b { background: white; margin-bottom: 30px; border-radius: 2px; }
 
 .btn { background: #43b29e; border-radius: 3px; min-width: 105px; height: 33px; line-height: 33px; white-space: nowrap; padding: 0 10px; font-size: 14px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
+.btn i { margin-right: 10px; vertical-align: middle; position: relative; top: 1px; }
 .btn:hover { background: #358d7d; }
 
 .bluebtn, .redbtn { background: #677689; border-radius: 3px; height: 40px; line-height: 40px; white-space: nowrap; padding: 0 24px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; cursor: pointer; color: white; text-decoration: none; display: inline-block; text-align: center; }
@@ -57,13 +58,16 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__edit, .table .table__info, .table .table__remove { background: #70859d; width: 38px; padding: 0; text-align: center; color: white; cursor: pointer; }
 .table .table__edit:hover, .table .table__info:hover, .table .table__remove:hover { background: #596c81; background: white; box-shadow: inset 0 0 0 2px #70859d; color: #70859d; }
 .table .table__edit i, .table .table__info i, .table .table__remove i { position: relative; top: 3px; }
-.table .table__info_alt { box-shadow: none; background: white; color: #70859d; }
 .table .table__remove { background: #ecaaab; font-size: 23px; }
 .table .table__remove:hover { background: #e06b6c; background: white; box-shadow: inset 0 0 0 2px #e06b6c; color: #e06b6c; }
 .table .table__remove i { top: 5px; }
+.table .table__info_alt, .table .table__remove_alt, .table .table__edit_alt { box-shadow: none; background: white; color: #70859d; }
+.table .table__edit_alt { color: #5c6986; padding: 0 10px; }
+.table .table__remove_alt { color: #e26a6a; padding: 0 10px; }
 .table .table__green { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
 .table .table__currency { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; margin-left: 10px; }
 .table .table__font { font-family: "Source Code Pro", sans-serif; font-weight: 400; }
+.table .table__lite { font-family: lite, sans-serif; font-weight: normal; }
 .table .table__invoice a { display: inline-block; border: 2px solid #677689; padding: 0 8px; height: 24px; line-height: 24px; font-size: 13px; color: #445572; text-decoration: none; }
 .table .table__invoice a:hover { color: white; background: #445572; }
 .table .table__amount { text-align: right; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
@@ -95,7 +99,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .filters .filters__right { float: right; text-align: right; white-space: nowrap; }
 .filters .filters__right .btn { margin-left: 10px; }
 
-.select { border: 2px solid #bccdd5; width: 266px; position: relative; display: inline-block; border-radius: 3px; padding: 0px 16px; height: 41px; line-height: 41px; }
+.select { border: 2px solid #bccdd5; width: 266px; position: relative; display: inline-block; border-radius: 3px; padding: 0px 16px; height: 40px; line-height: 40px; }
 .select i { position: absolute; right: 15px; top: 15px; line-height: 1; }
 .select .select__value { font-size: 17px; }
 .select select { opacity: 0; position: absolute; height: 100%; top: 0; left: 0; -webkit-appearance: none; z-index: 1; width: 100%; }
@@ -109,6 +113,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .select .select__subvalue .select__money { margin-left: 55px; font-family: "Source Code Pro", sans-serif; font-weight: 600; font-size: 17px; color: #455473; vertical-align: middle; display: inline-block; position: relative; top: -2px; }
 .select .select__subvalue .select__sum { font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; color: #485878; position: relative; top: -2px; }
 .select .select__subvalue .select__sum span { color: #3db396; }
+.select.select_gray { border: none; background: #ebeff6; }
 .select.is-active .select__drop { display: block; }
 .select .select__drop { position: absolute; top: 50px; left: -2px; width: 100%; border: 2px solid #bccdd5; display: none; background: white; z-index: 1000; border-radius: 3px; }
 .select .select__drop ul { list-style: none; }
@@ -196,6 +201,8 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .icon-home:before { content: "G"; }
 
 .icon-cli:before { content: "H"; }
+
+.icon-btc1:before { content: "I"; }
 
 .l-sidenav { position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; background: #445572; width: 80px; overflow: hidden; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease; }
 .is-sidenav .l-sidenav { width: 225px; }
@@ -462,8 +469,9 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .verify { background: #faf1d7; border: 3px solid #efd271; margin-bottom: 24px; font-size: 17px; font-family: lite, sans-serif; font-weight: normal; color: #485878; padding: 25px; *zoom: 1; }
 .verify:after { content: " "; display: table; clear: both; }
-.verify p { padding-top: 5px; }
+.verify p { padding-top: 10px; }
 .verify .verify__button { float: right; }
+.verify .verify__button .btn { font-size: 17px; font-family: semi, sans-serif; font-weight: normal; height: 40px; line-height: 40px; }
 
 .volume { *zoom: 1; margin-bottom: 25px; }
 .volume:after { content: " "; display: table; clear: both; }
@@ -474,3 +482,29 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .volume .volume__value { font-size: 38px; font-family: "Source Code Pro", sans-serif; font-weight: 700; text-align: center; color: #485878; height: 74px; line-height: 74px; }
 .volume .volume__change { height: 37px; line-height: 37px; display: block; text-align: center; border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; font-family: "Source Code Pro", sans-serif; font-weight: 700; color: white; font-size: 21px; background: #44afa1; }
 .volume .volume__change.is-negative { background: #e06b6c; }
+
+.addb { background: #f9fafb; padding: 20px 86px; border-bottom: 1px solid #ebeff6; }
+.addb .addb__inner { background: white; border: 2px solid #e6eef2; border-radius: 3px; }
+.addb .addb__innercontent { padding: 20px 25px 1px 20px; }
+.addb .addb__choosebutton { border-bottom: 1px solid #e6eef2; *zoom: 1; }
+.addb .addb__choosebutton:after { content: " "; display: table; clear: both; }
+.addb .addb__choosebutton .addb__inputradio { height: 16px; width: 16px; border-radius: 16px; border: 2px solid #677689; display: inline-block; position: relative; vertical-align: middle; margin-right: 12px; }
+.addb .addb__choosebutton input { display: none; }
+.addb .addb__choosebutton input:checked + .addb__inputradio:before { width: 10px; height: 10px; background: #3cb39e; border-radius: 10px; position: absolute; top: 3px; left: 3px; content: " "; }
+.addb .addb__choosebutton .addb__buttonb { width: 50%; float: left; padding: 25px 0; text-align: center; cursor: pointer; position: relative; }
+.addb .addb__choosebutton .addb__buttonb:first-child:before { content: " "; position: absolute; right: 0; top: 0; bottom: 0; border-right: 1px solid #e6eef2; }
+.addb .addb__button { display: inline-block; border: 2px solid #49aea1; padding: 0 29px 0 15px; font-size: 17px; height: 40px; line-height: 40px; border-radius: 3px; cursor: pointer; font-family: semi, sans-serif; font-weight: normal; color: #43afa1; }
+.addb .addb__button i { font-weight: normal; color: #fad575; margin-right: 10px; vertical-align: middle; font-size: 14px; position: relative; color: white; top: -1px; background: #f7d27e; width: 20px; text-align: center; height: 20px; line-height: 20px; border-radius: 20px; display: inline-block; }
+.addb .addb__button i:before { position: relative; top: 3px; left: 1px; }
+.addb textarea { resize: vertical; }
+.addb .submit, .addb .launch { margin: 0 -2px -2px -2px; }
+.addb .addb__field { *zoom: 1; margin-bottom: 20px; }
+.addb .addb__field:after { content: " "; display: table; clear: both; }
+.addb .addb__field .select { float: right; width: 240px; }
+.addb .addb__field .input_short { width: 210px; float: left; }
+.addb .addb__field label { float: left; width: 135px; font-size: 17px; font-family: semi, sans-serif; font-weight: normal; color: #33495d; padding-top: 6px; padding-top: 10px; }
+.addb .addb__field .addb__input { float: right; width: 490px; }
+.addb .hr { margin: 20px -25px; border-top: 2px solid #ebeff6; display: block; background: red; }
+.addb .addb__advanced { font-size: 15px; color: #3cb39e; margin: 20px 0 20px 143px; cursor: pointer; font-family: lite, sans-serif; font-weight: normal; }
+.addb .addb__advanced i { font-size: 23px; color: #515f78; margin-left: 6px; }
+.addb .addb__advanced.is-active i { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); }

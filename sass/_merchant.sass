@@ -8,9 +8,14 @@
 	padding: 25px  
 	+clr
 	p
-		padding-top: 5px 
+		padding-top: 10px 
 	.verify__button
 		float: right
+		.btn
+			font-size: 17px 
+			+semi
+			height: 40px 
+			line-height: 40px 
 
 .volume
 	+clr
@@ -54,3 +59,127 @@
 		background: #44AFA1 
 		&.is-negative
 			background: #E06B6C 
+.addb
+	background: #F9FAFB
+	padding: 20px  86px
+	border-bottom: 1px solid #EBEFF6 
+	.addb__inner
+		background: #fff 
+		border: 2px solid #E6EEF2
+		border-radius: 3px
+	.addb__innercontent
+		padding: 20px 25px 1px 20px 
+	.addb__choosebutton
+		border-bottom: 1px solid #E6EEF2 
+		+clr
+		.addb__inputradio
+			height: 16px 
+			width: 16px
+			border-radius: 16px
+			border: 2px solid #677689  
+			display: inline-block
+			position: relative
+			vertical-align: middle
+			margin-right: 12px 
+		input
+			display: none
+			&:checked+.addb__inputradio
+				&:before
+					width: 10px  
+					height: 10px 
+					background: #3CB39E
+					border-radius: 10px
+					position: absolute
+					top: 3px  
+					left: 3px 
+					content: ' '
+		
+		.addb__buttonb
+			width: 50%
+			float: left
+			padding: 25px 0
+			text-align: center
+			cursor: pointer
+			position: relative
+			&:first-child
+				&:before
+					content: ' '
+					position: absolute
+					right: 0
+					top: 0
+					bottom: 0
+					border-right: 1px solid #E6EEF2   
+	.addb__button
+		display: inline-block
+		border: 2px solid #49AEA1 
+		padding: 0 29px 0 15px 
+		font-size: 17px 
+		height: 40px 
+		line-height: 40px 
+		border-radius: 3px
+		cursor: pointer
+		+semi
+		color: #43AFA1 
+		i
+			font-weight: normal
+			color: #FAD575 
+			margin-right: 10px 
+			vertical-align: middle
+			font-size: 14px 
+			position: relative
+			color: #fff
+			top: -1px 
+			background: #F7D27E  
+			width: 20px
+			text-align: center
+			height: 20px
+			line-height: 20px
+			border-radius: 20px   
+			display: inline-block
+			&:before
+				position: relative
+				top: 3px 
+				left: 1px 
+	textarea
+		resize: vertical 
+	.submit
+		margin: 0 -2px -2px -2px
+	.addb__field
+		+clr
+		margin-bottom: 20px 
+		.select
+			float: right
+			width: 240px 
+		.input_short
+			width: 210px 
+			float: left
+		label
+			float: left
+			width: 135px 
+			font-size: 17px 
+			+semi
+			color: #33495D
+			padding-top: 6px  
+			padding-top: 10px 
+		.addb__input
+			float: right
+			width: 490px 
+	.hr
+		margin: 20px -25px
+		border-top: 2px solid #EBEFF6  
+		display: block
+		background: red  
+	.addb__advanced
+		font-size: 15px  
+		color: #3CB39E
+		margin: 20px 0 20px 143px 
+		cursor: pointer
+		+lite
+		i
+			font-size: 23px 
+			color: #515F78
+			margin-left: 6px  
+		&.is-active
+			i
+				+transform(rotate(180deg))
+			
