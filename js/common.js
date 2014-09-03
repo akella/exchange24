@@ -47,4 +47,6 @@ head.ready(function() {
 	$('.js-togglerow').click(function(event) {
 		$(this).parent().next().toggle();
 	});
+	// @todo set input value
+	// @todo hide dropdowns on blur
 });

@@ -1,0 +1,56 @@
+.verify
+	background: #FAF1D7
+	border: 3px solid #EFD271  
+	margin-bottom: 24px 
+	font-size: 17px 
+	+lite
+	color: #485878
+	padding: 25px  
+	+clr
+	p
+		padding-top: 5px 
+	.verify__button
+		float: right
+
+.volume
+	+clr
+	margin-bottom: 25px 
+	.volume__col
+		float: left
+		width: 32%
+		margin-left: 2%
+		background: #FFFFFF
+		border-radius: 3px 
+		&.is-first
+			margin-left: 0 
+	.volume__title
+		height: 40px 
+		line-height: 40px
+		text-align: center
+		font-size: 17px 
+		color: #34495E 
+		border-bottom: 1px solid #EBEFF6  
+		span
+			+sbold
+			font-size: 17px 
+			color: #44AFA1 
+	.volume__value
+		font-size: 38px 
+		+sbold
+		text-align: center
+		color: #485878 
+		height: 74px 
+		line-height: 74px 
+	.volume__change
+		height: 37px 
+		line-height: 37px 
+		display: block
+		text-align: center
+		border-bottom-left-radius: 3px
+		border-bottom-right-radius: 3px
+		+sbold
+		color: #fff 
+		font-size: 21px 
+		background: #44AFA1 
+		&.is-negative
+			background: #E06B6C 

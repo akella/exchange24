@@ -240,6 +240,19 @@ body
 		margin-left: 10px 
 	.table__font
 		+snormal
+	.table__invoice
+		a
+			display: inline-block
+			border: 2px solid #677689 
+			padding: 0 8px
+			height: 24px  
+			line-height: 24px
+			font-size: 13px  
+			color: #445572
+			text-decoration: none
+			&:hover
+				color: #fff 
+				background: #445572 
 	.table__amount
 		text-align: right
 		+sbold
@@ -261,6 +274,8 @@ body
 		padding-right: 30px 
 		&.is-pending
 			color: #F1D36B 
+		&.is-aborted
+			color: #E06B6C 
 	.table__date
 		padding-left: 25px 
 		padding-right: 20px 
