@@ -68,6 +68,7 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .table .table__currency { color: #44afa1; font-family: "Source Code Pro", sans-serif; font-weight: 700; margin-left: 10px; }
 .table .table__font { font-family: "Source Code Pro", sans-serif; font-weight: 400; }
 .table .table__lite { font-family: lite, sans-serif; font-weight: normal; }
+.table .table__invoice { padding-left: 30px; }
 .table .table__invoice a { display: inline-block; border: 2px solid #677689; padding: 0 8px; height: 24px; line-height: 24px; font-size: 13px; color: #445572; text-decoration: none; }
 .table .table__invoice a:hover { color: white; background: #445572; }
 .table .table__amount { text-align: right; font-family: "Source Code Pro", sans-serif; font-weight: 700; }
@@ -517,6 +518,15 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .setting { height: 59px; line-height: 59px; border-bottom: 1px solid #ebeff6; position: relative; }
 .setting .setting__name { font-size: 17px; font-family: semi, sans-serif; font-weight: normal; color: #33495d; height: 59px; line-height: 59px; padding-left: 30px; }
 .setting .setting__value { position: absolute; right: 30px; top: 14px; position: absolute; }
+.setting.setting_more:hover { background: #f9fafb; }
+.setting.setting_more:hover .setting__edit { display: inline-block; }
+.setting.setting_more .setting__edit { display: none; cursor: pointer; z-index: 10; position: absolute; right: 22px; top: 14px; line-height: 1; font-size: 25px; color: #485876; }
+.setting.setting_more .setting__value { left: 276px; position: absolute; top: 8px; font-size: 17px; color: #485778; font-family: semi, sans-serif; font-weight: normal; height: 45px; line-height: 45px; }
+.setting.setting_more .setting__value .amountinput { width: 130px; }
+.setting.setting_more .setting__value .select { width: 95px; }
+.setting.setting_more .setting__value .js-payout { width: 300px; }
+.setting.setting_more .setting__name { font-family: lite, sans-serif; font-weight: normal; }
+.setting.setting_more .setting__name i { min-width: 30px; display: inline-block; vertical-align: middle; position: relative; top: 2px; }
 
 .checkbox { width: 80px; height: 33px; font-size: 15px; color: white; height: 33px; line-height: 33px; position: relative; display: block; cursor: pointer; }
 .checkbox input { display: none; }

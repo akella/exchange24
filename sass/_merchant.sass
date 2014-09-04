@@ -200,6 +200,46 @@
 		right: 30px 
 		top: 14px 
 		position: absolute
+	&.setting_more
+		&:hover
+			background: #F9FAFB
+			.setting__edit
+				// display: block
+				display: inline-block
+		.setting__edit
+			display: none
+			cursor: pointer
+			z-index: 10 
+			position: absolute
+			right: 22px 
+			top: 14px 
+			line-height: 1 
+			
+			font-size: 25px 
+			color: #485876 
+		.setting__value
+			left: 276px 
+			position: absolute
+			top: 8px
+			font-size: 17px  
+			color: #485778
+			+semi 
+			height: 45px
+			line-height: 45px
+			.amountinput
+				width: 130px
+			.select
+				width: 95px 
+			.js-payout
+				width: 300px 
+		.setting__name
+			+lite
+			i
+				min-width: 30px 
+				display: inline-block
+				vertical-align: middle
+				position: relative
+				top: 2px 
 .checkbox
 	width: 80px 
 	height: 33px 

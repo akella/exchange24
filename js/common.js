@@ -5,7 +5,7 @@ head.ready(function() {
 	});
 
 	$('.js-toggle').click(function(event) {
-		$('#'+$(this).data('toggle')).slideToggle();
+		$('#'+$(this).data('toggle')).toggle();
 	});
 	$('.top__selectvalue').click(function(event) {
 		$(this).parent().toggleClass('is-active');
