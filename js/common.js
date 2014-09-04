@@ -56,9 +56,17 @@ head.ready(function() {
 			.removeClass('is-active')
 			.children('.select__valuewrap')
 			.html($(this).html());
+		// this sets hidden input value
+		if($(this).closest('.select').find('input').length){
+			$(this).closest('.select').find('input').val($(this).html());
+		}
 	});
 	$(".js-genericselect select").change(function(event) {
 		$(this).parents('.select').children('.select__value').text($(this).val());
+		// this optionally sets input, if there is one
+		if($(this).parents('.select').find('input').length){
+			$(this).parents('.select').find('input').val($(this).val());
+		}
 	});
 	$('.js-toggledate').change(function(event) {
 		if($(this).val()=='Custom'){
@@ -71,6 +79,4 @@ head.ready(function() {
 	$('.js-togglerow').click(function(event) {
 		$(this).parent().next().toggle();
 	});
-	// @todo set input value
-	// @todo hide dropdowns on blur
 });
