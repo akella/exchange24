@@ -7,9 +7,18 @@ head.ready(function() {
 	$('.js-toggle').click(function(event) {
 		$('#'+$(this).data('toggle')).toggle();
 	});
+
 	$('.top__selectvalue').click(function(event) {
 		$(this).parent().toggleClass('is-active');
 	});
+	$(document).click(function(event) { 
+	    if(!$(event.target).closest('.top__select').length) {
+	        if($('.top__select').hasClass("is-active")) {
+	            $('.top__select').toggleClass('is-active');
+	        }
+	    }        
+	})
+
 	$('.top__selectdrop a').click(function(event) {
 		event.preventDefault();
 		$(this).closest('.top__select').removeClass('is-active');
@@ -19,12 +28,27 @@ head.ready(function() {
 	$('.user').click(function(event) {
 		$(this).toggleClass('is-active');
 	});
+	$(document).click(function(event) { 
+	    if(!$(event.target).closest('.user').length) {
+	        if($('.user').hasClass("is-active")) {
+	            $('.user').toggleClass('is-active');
+	        }
+	    }        
+	})
 	// $('.select').click(function(event) {
 	// 	$(this).toggleClass('is-active');
 	// });
 	$('.js-payout .select__valuewrap').click(function(event) {
 		$(this).parents('.select').toggleClass('is-active');
 	});
+
+	$(document).click(function(event) { 
+	    if(!$(event.target).closest('.js-payout').length) {
+	        if($('.js-payout').hasClass("is-active")) {
+	            $('.js-payout').toggleClass('is-active');
+	        }
+	    }        
+	})
 
 	$('.js-payout li').click(function(event) {
 		$(this)
