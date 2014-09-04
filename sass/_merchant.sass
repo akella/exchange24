@@ -182,4 +182,262 @@
 		&.is-active
 			i
 				+transform(rotate(180deg))
-			
+
+.setting
+	height: 59px 	
+	line-height: 59px
+	border-bottom: 1px solid #EBEFF6 
+	position: relative
+	.setting__name
+		font-size: 17px 
+		+semi
+		color: #33495D
+		height: 59px  
+		line-height: 59px
+		padding-left: 30px  
+	.setting__value
+		position: absolute
+		right: 30px 
+		top: 14px 
+		position: absolute
+.checkbox
+	width: 80px 
+	height: 33px 
+	font-size: 15px 
+	color: #fff 
+	height: 33px
+	line-height: 33px
+	position: relative
+	display: block
+	cursor: pointer
+	input
+		display: none
+	.checkbox__bg  
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0    
+		border: 1px solid #DD6A6D
+		border-radius: 4px 
+		background: #EBEFF6 
+		box-shadow: inset 0px 0 0px 2px #DADEE5
+	.checkbox__value
+		position: absolute
+		right: 0
+		top: 0
+		bottom: 0
+		width: 43px    
+		background: #DD6A6D 
+		border-top-right-radius: 2px
+		border-bottom-right-radius: 2px
+		+transition(all .1s linear)
+		box-shadow:  -2px 0 0px  #DADEE5
+		-webkit-backface-visibility: hidden
+	.checkbox__on,.checkbox__off
+		width: 43px 
+		position: absolute
+		text-align: center
+		top: 0  
+		left: 0 
+		+transition(all .1s linear)
+	.checkbox__on
+		opacity: 0 
+	.checkbox__off
+		right: 0 
+		left: auto 
+	input:checked +.checkbox__bg
+		border-color: #50AEA1 
+		.checkbox__on
+			opacity: 1
+		.checkbox__off
+			opacity: 0 
+		.checkbox__value
+			background: #50AEA1 
+			right: 36px 
+			border-radius: 0
+			border-top-left-radius: 2px
+			border-bottom-left-radius: 2px
+			box-shadow:  2px 0 0px  #DADEE5
+
+.widgetwrap
+	padding: 30px 50px
+	background: #69819C 
+.widget
+	background: #EBEFF7
+	.widget__header
+		background: #fff  
+		border-bottom: 2px solid #495876 
+		height: 57px 
+		line-height: 57px
+		padding-left: 25px  
+	.widget__logo
+		display: inline-block
+		font-style: italic 
+		color: #43AFA1 
+		font-size: 21px 
+		text-decoration: none
+	.widget__url
+		margin-left: 35px 
+		+lite
+		font-size: 21px 
+		color: #485778 
+		display: inline-block
+		text-decoration: none
+	.widget__content
+		padding: 20px 15px 
+	.widget__validfor
+		@extend .pricevalid
+		position: static
+		color: #495876
+		background: #fff 
+		span
+			color: #495876 
+	.widget__powered
+		height: 48px 
+		line-height: 48px
+		font-size: 15px 
+		color: #AFB8C6 
+		text-align: center
+		a
+			+semi
+			text-decoration: none
+			color: #AFB8C6 
+	.widget__tabcontent
+		background: #fff
+		padding: 23px 15px 
+		+clr
+	.widget__tabs
+		+clr
+		a
+			float: left
+			font-size: 18px 
+			text-decoration: none 
+			height: 60px 
+			width: 356px 
+			background: #485778 
+			line-height: 60px
+			text-align: center
+			font-style: italic
+			color: #D6D9E0  
+			i
+				font-size: 20px 
+				vertical-align: middle
+				margin-right: 10px
+				position: relative 
+				top: 2px 
+			&.is-active
+				background: #fff 
+				box-shadow: inset 0 6px 0 #50AEA1
+				color: #495876 
+		a+a
+			float: right
+			width: 355px 
+	.widget__qr
+		float: left
+		width: 340px 
+		img
+			display: block
+			width: 100% 
+	.paye
+		width: 336px 
+		border: 2px solid #BDCCD5 
+		float: right
+		border-radius: 3px
+		.submit
+			margin: 0 -2px -2px -2px 
+		.totalwrap
+			margin: 0 -2px  
+		.paye__content
+			padding: 46px 15px 42px 15px
+		.paye__title
+			font-size: 17px 
+			text-align: center
+			color: #485778 
+			margin-bottom: 24px 
+		.paye__sum
+			text-align: center
+			font-size: 30px  
+			+sbold
+			color: #485778
+			margin-bottom: 20px 
+			span
+				color: #43AFA1 
+.total
+	background: #455571
+	width: 100%  
+	th
+		text-align: left
+		padding-left: 20px 
+		+semi
+		font-size: 15px 
+		color: #fff 
+		vertical-align: middle
+	td
+		text-align: right
+		padding-right: 20px 
+		font-size: 17px 
+		padding-top: 10px 
+		padding-bottom: 10px 
+		+sbold
+		.total__sum
+			color: #fff
+			span 
+				color: #4CAFA1 
+		.total__sum1
+			+snormal
+			color: #BDCCD6 
+.login
+	border: 2px solid #BDCCD5 
+	border-radius: 3px
+	.login__title
+		height: 60px 
+		line-height: 60px
+		font-size: 17px  
+		text-align: center
+		color: #485878 
+		border-bottom: 1px solid #E6EEF2 
+	.login__form
+		padding: 50px 126px 20px 126px 
+	.login__reg
+		font-size: 17px 
+		color: #485878
+		text-align: center
+		margin-top: 40px 
+		a
+			text-decoration: none
+			color: #50AEA0 
+	.submit
+		margin: 0 -2px -2px -2px 
+.payit
+	border: 2px solid #BDCCD5 
+	border-radius: 3px
+	.paywith
+		width: 350px 
+		margin: 0 auto 
+	.payit__description
+		font-size: 17px 
+		color: #485878 
+		text-align: center
+		margin-bottom: 20px 
+		.payit__sum
+			+sbold
+			margin: 0 5px 
+			span
+				color: #44AFA1 
+	.payit__title
+		height: 60px 
+		line-height: 60px
+		font-size: 17px  
+		text-align: center
+		color: #485878 
+		border-bottom: 1px solid #E6EEF2 
+		a
+			color: #44AFA1
+			text-decoration: none
+		b
+			+semi
+	.submit
+		margin: 0 -2px -2px -2px 
+	.totalwrap
+		margin: 0 -2px  
