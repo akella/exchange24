@@ -100,4 +100,12 @@ head.ready(function() {
 		$('.js-content').hide();
 		$('#'+idd).show();
 	});
+
+	$('#transaction-history').change(function() {
+	  $("#loading-spinner").fadeIn();
+	  $('body').css('overflow', 'hidden');
+	  $('body').css('height', '100%');
+	  $('#loading-screen').delay(100).fadeIn('slow');
+	  $(this).submit();
+	});
 });
