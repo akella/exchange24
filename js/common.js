@@ -95,12 +95,18 @@ head.ready(function() {
 		$(this).parents('.wallet').toggleClass('is-edit')
 	});
 	$('.js-tab').click(function(event) {
-		$('.js-tab').removeClass('is-active');
-		$(this).addClass('is-active');
-		idd = $(this).attr('href');
-		idd = idd.substring(1);
-		$('.js-content').hide();
-		$('#'+idd).show();
+		if($(this).hasClass('is-active')){
+			$('.js-tab').removeClass('is-active');
+			$('.js-content').hide();
+		}
+		else{
+			$('.js-tab').removeClass('is-active');
+			$(this).addClass('is-active');
+			idd = $(this).attr('href');
+			idd = idd.substring(1);
+			$('.js-content').hide();
+			$('#'+idd).show();
+		}
 	});
 
 	$('#transaction-history').change(function() {
