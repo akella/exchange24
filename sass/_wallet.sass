@@ -33,6 +33,17 @@
 	.wallet__header
 		height: 80px 
 		position: relative
+	.wallet__edited,.wallet__edit
+		display: inline-block
+	.wallet__edit
+		display: none
+	&.is-edit
+		.wallet__edit
+			display: inline-block
+		.wallet__edited
+			display: none
+
+
 	.wallet__title
 		float: left
 		width: 355px 

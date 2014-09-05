@@ -446,6 +446,10 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 .wallet .wallet__field label { float: left; text-align: right; width: 96px; font-size: 17px; color: #34495e; font-family: semi, sans-serif; font-weight: normal; height: 45px; line-height: 45px; }
 .wallet .wallet__field .wallet__input { float: right; width: 476px; }
 .wallet .wallet__header { height: 80px; position: relative; }
+.wallet .wallet__edited, .wallet .wallet__edit { display: inline-block; }
+.wallet .wallet__edit { display: none; }
+.wallet.is-edit .wallet__edit { display: inline-block; }
+.wallet.is-edit .wallet__edited { display: none; }
 .wallet .wallet__title { float: left; width: 355px; padding-left: 25px; height: 80px; line-height: 80px; }
 .wallet .wallet__title .wallet__titledit { width: 100px; display: inline-block; margin-right: 6px; }
 .wallet .wallet__title .bluebtn, .wallet .wallet__title .redbtn, .wallet .wallet__title .redbtn { margin-right: 6px; }

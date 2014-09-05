@@ -98,8 +98,8 @@
 					</div>
 					<div class="wallet__tabs">
 						<!-- <a href="#">Internal Transfer</a> -->
-						<a href="#"><i class="icon-send"></i>Send</a>
-						<a href="#" class="is-active"><i class="icon-i-deposit"></i>Receive</a>
+						<a href="#tab1" class="js-tab"><i class="icon-send"></i>Send</a>
+						<a href="#tab2" class="is-active js-tab"><i class="icon-i-deposit"></i>Receive</a>
 					</div>
 					<div class="wallet__balance">
 						<div class="wallet__sum">5.899837 <span>BTC</span></div>
@@ -108,7 +108,284 @@
 				</div>
 
 				<!-- begin wallet__actions  -->
-				<div class="wallet__actions">
+				<div class="wallet__actions js-content" id="tab1"  hidden>
+					<div class="wallet__action">
+					<div class="wallet__actioninner">
+						<div class="wallet__field">
+							<label for="">Amount</label>
+							<div class="wallet__input">
+								<!-- begin spendbuy -->
+								<div class="spendbuy spendbuy_small">
+									<div class="spendbuy__spend">
+										<div class="amountinput">
+											<input type="text" value="1231.12" class="input input_amount">
+											<div class="amountinput__currency">USD</div>
+										</div>
+									</div>
+									<div class="spendbuy__spend">
+										<div class="amountinput amountinput_inactive">
+											<input type="text" value="1231.12" class="input input_amount">
+											<div class="amountinput__currency">USD</div>
+											<div class="amountinput__approx">⁓</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- end spendbuy -->
+							</div>
+						</div>
+						<!-- end wallet field -->
+						<!-- begin wallet__field  -->
+						<div class="wallet__field">
+							<label for="">From</label>
+							<div class="wallet__input">
+								<div class="select select_green js-payout">
+									<div class="select__valuewrap">
+										<div class="select__value">Primary</div>
+										<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+									</div>
+									<i class="icon-arrow"></i>
+
+									<div class="select__drop">
+										<ul>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- end select -->
+							</div>
+						</div>
+						<!-- end wallet__field -->
+						<!-- begin wallet__field  -->
+						<div class="wallet__field">
+							<label for="">To</label>
+							<div class="wallet__input">
+								<div class="select select_green js-payout">
+									<div class="select__valuewrap">
+										<div class="select__value">Primary</div>
+										<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+									</div>
+									<i class="icon-arrow"></i>
+
+									<div class="select__drop">
+										<ul>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- end select -->
+							</div>
+						</div>
+						<!-- end wallet__field -->
+						<!-- begin wallet__field  -->
+						<div class="wallet__field">
+							<label for="">to</label>
+							<div class="wallet__input">
+								<div class="qrinput">
+									<input type="text" class="input" value="aad123asdasd">
+									<div class="qrinput__icon"><i class="icon-qr"></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- end wallet__field -->
+						
+					</div>
+					<div class="submit">TRANSFER</div>
+					</div>
+					<!-- end action -->
+				</div>
+				<!-- end wallet__actions -->
+
+
+
+
+
+				<!-- begin wallet__actions  -->
+				<div class="wallet__actions js-content" id="tab2"  hidden>
+					<div class="wallet__action">
+					<div class="wallet__actioninner">
+						<div class="wallet__field">
+							<label for="">SEND!!</label>
+							<div class="wallet__input">
+								<!-- begin spendbuy -->
+								<div class="spendbuy spendbuy_small">
+									<div class="spendbuy__spend">
+										<div class="amountinput">
+											<input type="text" value="1231.12" class="input input_amount">
+											<div class="amountinput__currency">USD</div>
+										</div>
+									</div>
+									<div class="spendbuy__spend">
+										<div class="amountinput amountinput_inactive">
+											<input type="text" value="1231.12" class="input input_amount">
+											<div class="amountinput__currency">USD</div>
+											<div class="amountinput__approx">⁓</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- end spendbuy -->
+							</div>
+						</div>
+						<!-- end wallet field -->
+						<!-- begin wallet__field  -->
+						<div class="wallet__field">
+							<label for="">From</label>
+							<div class="wallet__input">
+								<div class="select select_green js-payout">
+									<div class="select__valuewrap">
+										<div class="select__value">Primary</div>
+										<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+									</div>
+									<i class="icon-arrow"></i>
+
+									<div class="select__drop">
+										<ul>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- end select -->
+							</div>
+						</div>
+						<!-- end wallet__field -->
+						<!-- begin wallet__field  -->
+						<div class="wallet__field">
+							<label for="">To</label>
+							<div class="wallet__input">
+								<div class="select select_green js-payout">
+									<div class="select__valuewrap">
+										<div class="select__value">Primary</div>
+										<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+									</div>
+									<i class="icon-arrow"></i>
+
+									<div class="select__drop">
+										<ul>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+											<li>
+												<div class="select__value">Secondary</div>
+												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<!-- end select -->
+							</div>
+						</div>
+						<!-- end wallet__field -->
+						<!-- begin wallet__field  -->
+						<div class="wallet__field">
+							<label for="">to</label>
+							<div class="wallet__input">
+								<div class="qrinput">
+									<input type="text" class="input" value="aad123asdasd">
+									<div class="qrinput__icon"><i class="icon-qr"></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- end wallet__field -->
+						
+					</div>
+					<div class="submit">TRANSFER</div>
+					</div>
+					<!-- end action -->
+				</div>
+				<!-- end wallet__actions -->
+				
+				
+			</div>
+			<!-- end wallet -->
+			
+
+		</div>
+		<!-- end b -->
+
+
+		<!-- begin b -->
+		<div class="b b_white">
+
+
+			<!-- begin wallet  -->
+			<div class="wallet">
+				<div class="wallet__header">
+					<div class="wallet__title">
+						<i class="icon-edit js-editwallet"></i>
+
+						<div class="wallet__edited">
+							<strong>Total balance</strong> <div class="wallet__status">primary</div>
+						</div>
+						<div class="wallet__edit">
+							<input type="text" value="Total balance" class="wallet__titledit input"><div class="bluebtn js-savewallet">Save</div><div class="redbtn"><i class="icon-delete"></i></div>
+						</div>
+					</div>
+					<div class="wallet__tabs">
+						<a href="#" data-toggle="int1" class="is-big js-toggle">Internal Transfer</a>
+					</div>
+					<div class="wallet__balance">
+						<div class="wallet__sum">5.899837 <span>BTC</span></div>
+						<div class="wallet__sum is-inactive">~3235.76 <span>USD</span></div>
+					</div>
+				</div>
+
+				<!-- begin wallet__actions  -->
+				<div class="wallet__actions" id="int1" hidden>
 					<div class="wallet__action">
 					<div class="wallet__actioninner">
 						<div class="wallet__field">
@@ -243,10 +520,17 @@
 			<div class="wallet">
 				<div class="wallet__header">
 					<div class="wallet__title">
-						<i class="icon-edit"></i><strong>Total balance</strong> <div class="wallet__status">primary</div>
+						<i class="icon-edit js-editwallet"></i>
+
+						<div class="wallet__edited">
+							<strong>Total balance</strong> <div class="wallet__status">primary</div>
+						</div>
+						<div class="wallet__edit">
+							<input type="text" value="Total balance" class="wallet__titledit input"><div class="bluebtn js-savewallet">Save</div><div class="redbtn"><i class="icon-delete"></i></div>
+						</div>
 					</div>
 					<div class="wallet__tabs">
-						<a href="#" class="is-big">Internal Transfer</a>
+						<a href="#" data-toggle="internaltransfer" class="is-big is-active js-toggle">Internal Transfer</a>
 		
 					</div>
 					<div class="wallet__balance">
@@ -256,155 +540,7 @@
 				</div>
 
 				<!-- begin wallet__actions  -->
-				<div class="wallet__actions">
-					<div class="wallet__action">
-					<div class="wallet__actioninner">
-						<div class="wallet__field">
-							<label for="">Amount</label>
-							<div class="wallet__input">
-								<!-- begin spendbuy -->
-								<div class="spendbuy spendbuy_small">
-									<div class="spendbuy__spend">
-										<div class="amountinput">
-											<input type="text" value="1231.12" class="input input_amount">
-											<div class="amountinput__currency">USD</div>
-										</div>
-									</div>
-									<div class="spendbuy__spend">
-										<div class="amountinput amountinput_inactive">
-											<input type="text" value="1231.12" class="input input_amount">
-											<div class="amountinput__currency">USD</div>
-											<div class="amountinput__approx">⁓</div>
-										</div>
-									</div>
-
-								</div>
-								<!-- end spendbuy -->
-							</div>
-						</div>
-						<!-- end wallet field -->
-						<!-- begin wallet__field  -->
-						<div class="wallet__field">
-							<label for="">From</label>
-							<div class="wallet__input">
-								<div class="select select_green js-payout">
-									<div class="select__valuewrap">
-										<div class="select__value">Primary</div>
-										<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-									</div>
-									<i class="icon-arrow"></i>
-
-									<div class="select__drop">
-										<ul>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- end select -->
-							</div>
-						</div>
-						<!-- end wallet__field -->
-						<!-- begin wallet__field  -->
-						<div class="wallet__field">
-							<label for="">To</label>
-							<div class="wallet__input">
-								<div class="select select_green js-payout">
-									<div class="select__valuewrap">
-										<div class="select__value">Primary</div>
-										<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-									</div>
-									<i class="icon-arrow"></i>
-
-									<div class="select__drop">
-										<ul>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-											<li>
-												<div class="select__value">Secondary</div>
-												<div class="select__subvalue"><div class="select__sum">256.23 <span>USD</span></div></div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<!-- end select -->
-							</div>
-						</div>
-						<!-- end wallet__field -->
-						<!-- begin wallet__field  -->
-						<div class="wallet__field">
-							<label for="">to</label>
-							<div class="wallet__input">
-								<div class="qrinput">
-									<input type="text" class="input" value="aad123asdasd">
-									<div class="qrinput__icon"><i class="icon-qr"></i></div>
-								</div>
-							</div>
-						</div>
-						<!-- end wallet__field -->
-						
-					</div>
-					<div class="submit">TRANSFER</div>
-					</div>
-					<!-- end action -->
-				</div>
-				<!-- end wallet__actions -->
-				
-				
-			</div>
-			<!-- end wallet -->
-			
-
-		</div>
-		<!-- end b -->
-
-
-		<!-- begin b -->
-		<div class="b b_white">
-
-
-			<!-- begin wallet  -->
-			<div class="wallet">
-				<div class="wallet__header">
-					<div class="wallet__title">
-						<i class="icon-edit"></i><input type="text" class="wallet__titledit input"><div class="bluebtn">Save</div><div class="redbtn"><i class="icon-delete"></i></div>
-					</div>
-					<div class="wallet__tabs">
-						<a href="#" class="is-big">Internal Transfer</a>
-		
-					</div>
-					<div class="wallet__balance">
-						<div class="wallet__sum">5.899837 <span>BTC</span></div>
-						<div class="wallet__sum is-inactive">~3235.76 <span>USD</span></div>
-					</div>
-				</div>
-
-				<!-- begin wallet__actions  -->
-				<div class="wallet__actions">
+				<div class="wallet__actions" id="internaltransfer">
 					<div class="wallet__action wallet__action_qr">
 					<div class="wallet__actioninner">
 						<div class="wallet__qr">
@@ -449,34 +585,7 @@
 		</div>
 		<!-- end b -->
 
-		<!-- begin b -->
-		<div class="b b_white">
-
-
-			<!-- begin wallet  -->
-			<div class="wallet">
-				<div class="wallet__header">
-					<div class="wallet__title">
-						<i class="icon-edit"></i><input type="text" class="wallet__titledit input"><div class="bluebtn">Save</div><div class="redbtn"><i class="icon-delete"></i></div>
-					</div>
-					<div class="wallet__tabs">
-						<a href="#" class="is-big">Internal Transfer</a>
 		
-					</div>
-					<div class="wallet__balance">
-						<div class="wallet__sum">5.899837 <span>BTC</span></div>
-						<div class="wallet__sum is-inactive">~3235.76 <span>USD</span></div>
-					</div>
-				</div>
-
-				
-				
-			</div>
-			<!-- end wallet -->
-			
-
-		</div>
-		<!-- end b -->
 
 
 	</div>

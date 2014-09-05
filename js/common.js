@@ -5,6 +5,7 @@ head.ready(function() {
 	});
 
 	$('.js-toggle').click(function(event) {
+		event.preventDefault();
 		$('#'+$(this).data('toggle')).toggle();
 	});
 
@@ -77,6 +78,26 @@ head.ready(function() {
 		}
 	});
 	$('.js-togglerow').click(function(event) {
+		$('.table__more').parent().hide();
 		$(this).parent().next().toggle();
+	});
+
+	$('.wallet__tabs a').click(function(event) {
+		event.preventDefault();
+		$(this).siblings('a').removeClass('is-active');
+		$(this).addClass('is-active');
+	});
+	$('.js-editwallet').click(function(event) {
+		$(this).parents('.wallet').toggleClass('is-edit')
+	});
+	$('.js-savewallet').click(function(event) {
+		$(this).parents('.wallet__title').find('strong').text($(this).prev().val());
+		$(this).parents('.wallet').toggleClass('is-edit')
+	});
+	$('.js-tab').click(function(event) {
+		idd = $(this).attr('href');
+		idd = idd.substring(1);
+		$('.js-content').hide();
+		$('#'+idd).show();
 	});
 });
