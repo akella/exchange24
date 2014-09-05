@@ -82,7 +82,7 @@ head.ready(function() {
 		$(this).parent().next().toggle();
 	});
 
-	$('.wallet__tabs a').click(function(event) {
+	$('.wallet__tabs a,.widget__tabs a').click(function(event) {
 		event.preventDefault();
 		$(this).siblings('a').removeClass('is-active');
 		$(this).addClass('is-active');
