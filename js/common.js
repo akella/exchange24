@@ -82,11 +82,11 @@ head.ready(function() {
 		$(this).parent().next().toggle();
 	});
 
-	$('.wallet__tabs a,.widget__tabs a').click(function(event) {
-		event.preventDefault();
-		$(this).siblings('a').removeClass('is-active');
-		$(this).addClass('is-active');
-	});
+	// $('.wallet__tabs a,.widget__tabs a').click(function(event) {
+	// 	event.preventDefault();
+	// 	$(this).siblings('a').removeClass('is-active');
+	// 	$(this).addClass('is-active');
+	// });
 	$('.js-editwallet').click(function(event) {
 		$(this).parents('.wallet').toggleClass('is-edit')
 	});
@@ -95,6 +95,8 @@ head.ready(function() {
 		$(this).parents('.wallet').toggleClass('is-edit')
 	});
 	$('.js-tab').click(function(event) {
+		$('.js-tab').removeClass('is-active');
+		$(this).addClass('is-active');
 		idd = $(this).attr('href');
 		idd = idd.substring(1);
 		$('.js-content').hide();
