@@ -1,5 +1,5 @@
 head.ready(function() {
-
+	$('.input-date').datepicker();
 	$('.js-menu').on("click", function(){
 		$('body').toggleClass('is-sidenav is-notsidenav');
 	});
