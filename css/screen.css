@@ -722,8 +722,10 @@ body { font-family: proxima, sans-serif; font-weight: normal; font-size: 12px; l
 
 .ui-datepicker { border: 2px solid #435270; border-radius: 3px; background: white; }
 .ui-datepicker tbody td:hover { background: #fafafa; }
+.ui-datepicker tbody td { text-align: center; }
+.ui-datepicker tbody td a { text-align: center; }
 .ui-datepicker a { color: #44afa1; font-family: semi, sans-serif; font-weight: normal; font-size: 12px; }
 .ui-datepicker .ui-datepicker-month { font-family: semi, sans-serif; font-weight: normal; font-size: 17px; }
 .ui-datepicker .ui-datepicker-year { font-family: "Source Code Pro", sans-serif; font-weight: 700; font-size: 17px; color: #44afa1; z-index: 10000; }
-.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev { cursor: pointer; color: #44afa1; font-size: 20px; text-align: left; }
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-prev { cursor: pointer; color: #44afa1; font-size: 20px; text-align: left; top: 3px; }
 .ui-datepicker .ui-datepicker-next { text-align: right; }
